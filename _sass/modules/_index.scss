@@ -1,0 +1,8 @@
+// Index Styles
+.index {
+  @include span-columns(12);
+}
+
+.index-heading {
+  color: $color-text;
+}

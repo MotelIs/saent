@@ -1,0 +1,28 @@
+---
+# Main Sass!
+---
+@charset "utf-8";
+
+// Our variables
+$fontFamily-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontSize-base:   16px;
+$font_size: $fontSize-base; // For Bourbon
+$fontWeight-base: 400;
+$lineHeight-base: 1.5;
+
+$color-text:  #111;
+$color-bg:    #fdfdfd;
+$color-brand: #2a7ae2;
+
+// ------
+// Imports
+
+// lib
+@import "lib/bourbon/bourbon";
+@import "lib/neat/neat";
+
+// Global Styles
+@import "global/reset";
+
+// Modules
+@import "modules/index";
