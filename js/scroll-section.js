@@ -5,6 +5,7 @@ var ScrollSection = function() {
       var current = '';
       var top = $(window).scrollTop();
       var sections = $('[data-section]');
+      console.log(content);
 
       var getCurrentSection = function() {
 
