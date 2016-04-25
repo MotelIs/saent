@@ -5,13 +5,15 @@
 
   <body>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="fixed-header">
+      {% include _progress-bar.html %}
+      {% include _ui.html %}
     </div>
 
-    {% include footer.html %}
+
+    <div class="page-content">
+      {{ content }}
+    </div>
 
   </body>
 
