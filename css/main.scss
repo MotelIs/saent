@@ -12,7 +12,7 @@ $fontFamily-heading:    "Noto", Helvetica, Arial, sans-serif;
 $fontSize-base:         24px;
 $font_size: $fontSize-base; // For Bourbon
 $fontWeight-base:       400;
-$lineHeight-base:       1.5;
+$lineHeight-base:       1;
 
 
 $fontFamily--intro:     $fontFamily-base;
@@ -39,6 +39,7 @@ $color-green:   #7AC442;
 $color-red:     #E8212D;
 $color-orange:  #EF7F21;
 $color-magenta: #F272AA;
+$color-gray:    #BABFBF;
 
 
 // ------
@@ -47,9 +48,13 @@ $color-magenta: #F272AA;
 // lib
 @import "lib/bourbon/bourbon";
 @import "lib/neat/neat";
+@import "base/base";
 
 // Global Styles
 @import "global/reset";
 
 // Modules
 @import "modules/index";
+@import "modules/fixed-header";
+@import "modules/progress-bar";
+@import "modules/ui";

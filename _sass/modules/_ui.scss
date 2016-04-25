@@ -1,0 +1,80 @@
+.ui {
+  @include outer-container(100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 13px;
+}
+
+.ui-conversation {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.ui-conversation-title {
+  font-family: $fontFamily--ui;
+  font-size: $fontSize--ui;
+  font-weight: $fontWeight--ui;
+  color: $color-text;
+  float: left;
+  margin-left: 24px;
+}
+
+.logo {
+  width: 64px;
+  height: auto;
+  float: left;
+}
+
+.ui-options {
+  width: 50%;
+  text-align: right;
+}
+
+.ui-options-dropdown {
+  font-family: $fontFamily--dropdown;
+  font-size: $fontSize--dropdown;
+  font-weight: $fontWeight--dropdown;
+  color: $color-text;
+  padding: 16px 41px 18px 21px;
+  border: 1px solid $color-text;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  margin-right: 18px;
+
+  &:after {
+    content: '';
+    border-left: 7px solid rgba(0,0,0,0);
+    border-right: 7px solid rgba(0,0,0,0);
+    border-top: 13px solid $color-text;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 16px;
+  }
+}
+
+.ui-options-cta {
+  font-family: $fontFamily--button;
+  font-size: $fontSize--button;
+  font-weight: $fontWeight--button;
+  background-color: $color-blue;
+  border-radius: 4px;
+  color: #FFF;
+  padding: 18px 44px 18px 16px;
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    border-left: 7px solid rgba(0,0,0,0);
+    border-right: 7px solid rgba(0,0,0,0);
+    border-top: 13px solid #FFF;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 16px;
+  }
+}
