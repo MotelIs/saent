@@ -3,16 +3,43 @@
 ---
 @charset "utf-8";
 
-// Our variables
-$fontFamily-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$fontSize-base:   16px;
-$font_size: $fontSize-base; // For Bourbon
-$fontWeight-base: 400;
-$lineHeight-base: 1.5;
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Lato:400,300);
 
-$color-text:  #111;
-$color-bg:    #fdfdfd;
-$color-brand: #2a7ae2;
+// Our variables
+$fontFamily-base:       "Lato", Helvetica, Arial, sans-serif;
+$fontFamily-heading:    "Noto", Helvetica, Arial, sans-serif;
+$fontSize-base:         24px;
+$font_size: $fontSize-base; // For Bourbon
+$fontWeight-base:       400;
+$lineHeight-base:       1.5;
+
+
+$fontFamily--intro:     $fontFamily-base;
+$fontSize--intro:       42px;
+$fontWeight--intro:     400;
+
+$fontFamily--ui:        $fontFamily-base;
+$fontSize--ui:          24px;
+$fontWeight--ui:        400;
+
+$fontFamily--dropdown:  $fontFamily-base;
+$fontSize--dropdown:    18px;
+$fontWeight--dropdown:  400;
+
+$fontFamily--button:    $fontFamily-heading;
+$fontSize--button:      18px;
+$fontWeight--button:    700;
+
+
+$color-text:    #4F4C4F;
+$color-bg:      #F4F4F4;
+$color-blue:    #14AAE2;
+$color-green:   #7AC442;
+$color-red:     #E8212D;
+$color-orange:  #EF7F21;
+$color-magenta: #F272AA;
+
 
 // ------
 // Imports
