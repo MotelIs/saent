@@ -1,0 +1,8 @@
+.challenges {
+  @extend .section;
+  background-color: $color-blue;
+}
+
+.challenges-illustration {
+  @extend .illustration;
+}

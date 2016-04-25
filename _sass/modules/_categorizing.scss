@@ -1,0 +1,8 @@
+.categorizing {
+  @extend .section;
+  background-color: $color-blue;
+}
+
+.categorizing-illustration {
+  @extend .illustration;
+}

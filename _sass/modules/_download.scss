@@ -1,0 +1,34 @@
+.download {
+  @extend .section;
+  background-color: $color-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-illustration {
+  text-align: center;
+}
+
+.download-screenshot {
+  display: inline-block;
+  max-width: 500px;
+}
+
+.download-buttons {
+  margin-bottom: 70px;
+}
+
+.btn {
+  font-family: $fontFamily--button;
+  font-size: $fontSize--button;
+  font-weight: $fontWeight--button;
+  background-color: #FFF;
+  border-radius: 4px;
+  color: $color-blue;
+  padding: 15px 21px 18px 20px;
+
+  &:first-of-type {
+    margin-right: 20px;
+  }
+}

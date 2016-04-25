@@ -1,0 +1,44 @@
+.intro {
+  @extend .section;
+  background-color: $color-bg;
+}
+
+.intro-content {
+  @include outer-container();
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.intro-text {
+  width: 50%;
+  padding-left: 90px;
+  position: relative;
+}
+
+.intro-text h1 {
+  font-family: $fontFamily--intro;
+  font-size: $fontSize--intro;
+  font-weight: $fontWeight--intro;
+  color: $color-text;
+  max-width: 353px;
+  line-height: 1.125em;
+}
+
+.intro-text .logo {
+  position: absolute;
+  left: 0;
+}
+
+.intro-text .brand {
+  color: $color-blue;
+  font-weight: 400;
+  margin-bottom: 46px;
+  display: inline-block;
+}
+
+.intro-screenshot {
+  width: 50%;
+  max-width: 546px;
+}

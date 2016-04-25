@@ -17,7 +17,7 @@ $lineHeight-base:       1;
 
 $fontFamily--intro:     $fontFamily-base;
 $fontSize--intro:       42px;
-$fontWeight--intro:     400;
+$fontWeight--intro:     300;
 
 $fontFamily--ui:        $fontFamily-base;
 $fontSize--ui:          24px;
@@ -54,7 +54,17 @@ $color-gray:    #BABFBF;
 @import "global/reset";
 
 // Modules
-@import "modules/index";
+@import "modules/global";
+@import "modules/breaks";
+@import "modules/categorizing";
+@import "modules/challenges";
+@import "modules/distractions";
+@import "modules/download";
 @import "modules/fixed-header";
+@import "modules/index";
+@import "modules/intro";
+@import "modules/life";
+@import "modules/line-dock";
 @import "modules/progress-bar";
+@import "modules/sessions";
 @import "modules/ui";

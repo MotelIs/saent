@@ -1,0 +1,8 @@
+.sessions {
+  @extend .section;
+  background-color: $color-blue;
+}
+
+.sessions-illustration {
+  @extend .illustration;
+}
