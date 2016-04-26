@@ -12,7 +12,8 @@ var ScrollSection = function() {
           ui.addClass('active');
           var newText = content[current];
           $('[data-ui-title]').text(newText.title);
-          $('[data-ui-button]').text(newText.button);
+          $('[data-ui-button-text]').text(newText.button);
+          $('[data-ui-foldout-text]').text(newText.foldout);
 
         } else {
           // in the first section

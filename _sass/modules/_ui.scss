@@ -1,10 +1,4 @@
 .ui {
-  @include outer-container(100%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $color-bg;
-  padding: 28px 13px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease-out;
@@ -15,10 +9,20 @@
   }
 }
 
+.ui-header {
+  @include outer-container(100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $color-bg;
+}
+
 .ui-conversation {
   display: flex;
   align-items: center;
   width: 50%;
+  padding: 28px 0 28px 13px;
 }
 
 .ui-conversation-title {
@@ -39,6 +43,7 @@
 .ui-options {
   width: 50%;
   text-align: right;
+  padding: 28px 13px 28px 0;
 }
 
 .ui-options-dropdown {
@@ -63,6 +68,20 @@
     top: 20px;
     right: 16px;
   }
+
+  &.active {
+    &:after {
+      content: '';
+      border-left: 7px solid rgba(0,0,0,0);
+      border-right: 7px solid rgba(0,0,0,0);
+      border-bottom: 13px solid $color-text;
+      border-top: none;
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      right: 16px;
+    }
+  }
 }
 
 .ui-options-cta {
@@ -85,5 +104,30 @@
     position: absolute;
     top: 20px;
     right: 16px;
+  }
+}
+
+.ui-foldout {
+  background-color: $color-bg;
+  width: 100%;
+  padding: 28px 13px 28px 16px;
+  border-top: 2px solid $color-gray;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  p {
+    font-family: $fontFamily--dropdown;
+    font-size: $fontSize--dropdown;
+    font-weight: $fontWeight--dropdown;
+    line-height: $lineHeight--dropdown;
+
+    max-width: 700px;
+    margin-left: 90px;
   }
 }
