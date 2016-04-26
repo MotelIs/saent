@@ -23,8 +23,8 @@ var ScrollSection = function() {
 
       var getCurrentSection = function() {
 
-        // measure off the middle of the browser window
-        top = $(window).scrollTop() + ($(window).height()/2);
+        // measure off the bottom of fixed header
+        top = $(window).scrollTop() + (128);
         var activeSection = ''
 
         for(var i = 0; i < sections.length; i++) {
@@ -63,6 +63,13 @@ var ScrollSection = function() {
          runAnimation(getCurrentSection());
       });
 
+      // watch for resizing
+      $(window).resize(function(){
+        for(var i = 0; i < sections.length; i++) {
+          sections[i].updateTop();
+        }
+      });
+
   })
 };
 
@@ -73,4 +80,8 @@ function section(elem) {
   this.self = elem;
   this.top = $(elem).offset().top;
   this.name = elem.className;
+
+  this.updateTop = function() {
+    this.top = $(this.self).offset().top;
+  }
 }
