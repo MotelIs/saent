@@ -1,4 +1,19 @@
 .life {
   @extend .section;
-  background-color: $color-green;
+  overflow: hidden;
+}
+
+.life-illustrations {
+  @extend .illustration;
+}
+
+.life.active .life-illustration {
+  @extend .illustration--active;
+}
+
+#life-scene {
+  position: fixed;
+  bottom: 0;
+  transition: $baseTransition;
+  opacity: 0;
 }

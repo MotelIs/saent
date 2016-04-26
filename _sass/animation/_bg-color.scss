@@ -1,0 +1,13 @@
+.animation {
+  background-color: $color-blue;
+  transition: $baseTransition;
+  transition-delay: 0.125s;
+
+  &[data-animation="distractions"] {
+    background-color: $color-orange;
+  }
+
+  &[data-animation="life"] {
+    background-color: $color-green;
+  }
+}

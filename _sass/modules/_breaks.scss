@@ -1,8 +1,15 @@
 .breaks {
   @extend .section;
-  background-color: $color-blue;
 }
 
 .breaks-illustration {
   @extend .illustration;
+}
+
+.breaks.active .breaks-illustration {
+  @extend .illustration--active;
+}
+
+#breaks-alert {
+  @extend .alert;
 }

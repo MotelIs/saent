@@ -1,8 +1,15 @@
 .categorizing {
   @extend .section;
-  background-color: $color-blue;
 }
 
 .categorizing-illustration {
   @extend .illustration;
+}
+
+.categorizing.active .categorizing-illustration {
+  @extend .illustration--active;
+}
+
+#categorizing-alert {
+  @extend .alert;
 }

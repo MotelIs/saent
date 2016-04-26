@@ -1,8 +1,15 @@
 .challenges {
   @extend .section;
-  background-color: $color-blue;
 }
 
 .challenges-illustration {
   @extend .illustration;
+}
+
+.challenges.active .challenges-illustration {
+  @extend .illustration--active;
+}
+
+#challenges-alert {
+  @extend .alert;
 }

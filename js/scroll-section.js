@@ -8,7 +8,8 @@ var ScrollSection = function() {
           ui = $('[data-ui]'),
           uiTitle = $('[data-ui-title]'),
           uiButton = $('[data-ui-button-text]'),
-          uiFoldout = $('[data-ui-foldout-text]');
+          uiFoldout = $('[data-ui-foldout-text]'),
+          animation = $('[data-animation]')
 
       var updateText = function() {
         if(current.length){
@@ -45,11 +46,13 @@ var ScrollSection = function() {
 
             if(!activeSection.hasClass('active')) {
               activeSection.addClass('active');
+              animation.attr('data-animation', section.name)
             }
 
           // have not reached next section. return previous
           } else {
             sectionObj.removeClass('active');
+            animation.attr('data-animation', activeSectionName)
             return activeSectionName;
           }
         }

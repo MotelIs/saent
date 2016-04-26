@@ -6,5 +6,20 @@
 }
 
 .illustration {
-  @include outer-container();
+  text-align: center;
+  transition: $baseTransition;
+  max-width: 100%;
+  text-align: center;
+}
+
+.illustration--active {
+  position: fixed;
+  top: 178px;
+  width: 100%;
+}
+
+.alert {
+  transition: $baseTransition;
+  max-width: 1200px;
+  opacity: 0;
 }

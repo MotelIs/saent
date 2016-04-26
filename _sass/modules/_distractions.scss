@@ -1,11 +1,21 @@
 .distractions {
   @extend .section;
-  background-color: $color-orange;
 }
 
 .distractions-illustration {
   @extend .illustration;
 }
+
+.distractions.active .distractions-illustration {
+  @extend .illustration--active;
+}
+
+.distractions.active .line-dock {
+  position: fixed;
+}
+
+
+
 
 #distractions-browser {
   width: 500px;
@@ -18,8 +28,4 @@
 
 #distractions-browser--right {
   @extend #distractions-browser;
-}
-
-.distractions .line-dock-app {
-  background-color: $color-orange;
 }

@@ -1,0 +1,35 @@
+[data-animation="sessions"],
+[data-animation="categorizing"],
+[data-animation="challenges"],
+[data-animation="breaks"],
+[data-animation="life"],
+[data-animation="download"] {
+  .distractions-illustration {
+    opacity: 0;
+  }
+}
+
+[data-animation="sessions"],
+[data-animation="categorizing"],
+[data-animation="challenges"],
+[data-animation="breaks"] {
+  .sessions-illustration {
+    opacity: 1;
+  }
+}
+
+[data-animation="categorizing"] #categorizing-alert {
+  opacity: 1;
+}
+
+[data-animation="challenges"] #challenges-alert {
+  opacity: 1;
+}
+
+[data-animation="breaks"] #breaks-alert {
+  opacity: 1;
+}
+
+[data-animation="life"] #life-scene {
+  opacity: 1;
+}
