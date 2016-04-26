@@ -2,18 +2,23 @@ var ScrollSection = function() {
 
   $(document).ready(function(){
 
-      var current = '';
-      var top = $(window).scrollTop();
-      var sections = $('[data-section]');
-      var ui = $('[data-ui]');
+      var current = '',
+          top = '',
+          sections = $('[data-section]'),
+          ui = $('[data-ui]'),
+          uiTitle = $('[data-ui-title]'),
+          uiButton = $('[data-ui-button-text]'),
+          uiFoldout = $('[data-ui-foldout-text]');
 
       var updateText = function() {
         if(current.length){
           ui.addClass('active');
+
           var newText = content[current];
-          $('[data-ui-title]').text(newText.title);
-          $('[data-ui-button-text]').text(newText.button);
-          $('[data-ui-foldout-text]').text(newText.foldout);
+
+          uiTitle.text(newText.title);
+          uiButon.text(newText.button);
+          uiFoldout.text(newText.foldout);
 
         } else {
           // in the first section
@@ -30,7 +35,7 @@ var ScrollSection = function() {
         for(var i = 0; i < sections.length; i++) {
           var section = sections[i];
 
-          // if section has scrolled passed middle of screen
+          // if section has scrolled passed
           if(section.top < top) {
             activeSection = section.name;
 
@@ -41,10 +46,10 @@ var ScrollSection = function() {
         }
       };
 
-      var runAnimation = function(section) {
+      var runAnimation = function(newSection) {
 
-        if(current != section) {
-          current = section;
+        if(current != newSection) {
+          current = newSection;
           updateText();
         } else {
           // do nothing, still in the same section
