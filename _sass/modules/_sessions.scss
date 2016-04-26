@@ -14,3 +14,23 @@
 .sessions.active .sessions-illustration {
   @extend .illustration--active;
 }
+
+
+
+
+.sessions-browser-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1000px;
+}
+
+#sessions-type {
+  color: #FFF;
+  font-family: "Courier";
+  font-size: 18px;
+  padding: 80px 30px;
+  text-align: left;
+}
