@@ -33,3 +33,24 @@
     }
   }
 }
+
+.btn {
+  font-family: $fontFamily--button;
+  font-size: $fontSize--button;
+  font-weight: $fontWeight--button;
+  background-color: #FFF;
+  border-radius: 4px;
+  color: $color-blue;
+  padding: 15px 21px 18px 20px;
+
+  &:first-of-type {
+    margin-right: 20px;
+  }
+}
+
+.btn--blue {
+  @extend .btn;
+  color: #FFF;
+  background-color: $color-blue;
+  display: inline-block;
+}
