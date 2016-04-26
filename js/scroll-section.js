@@ -5,7 +5,20 @@ var ScrollSection = function() {
       var current = '';
       var top = $(window).scrollTop();
       var sections = $('[data-section]');
-      console.log(content);
+      var ui = $('[data-ui]');
+
+      var updateText = function() {
+        if(current.length){
+          ui.addClass('active');
+          var newText = content[current];
+          $('[data-ui-title]').text(newText.title);
+          $('[data-ui-button]').text(newText.button);
+
+        } else {
+          // in the first section
+          ui.removeClass('active');
+        }
+      };
 
       var getCurrentSection = function() {
 
@@ -28,7 +41,13 @@ var ScrollSection = function() {
       };
 
       var runAnimation = function(section) {
-        console.log(section);
+
+        if(current != section) {
+          current = section;
+          updateText();
+        } else {
+          // do nothing, still in the same section
+        }
       };
 
 
