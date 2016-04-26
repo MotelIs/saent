@@ -8,4 +8,5 @@
 [data-animation="distractions"] .line-dock-app {
   background-color: $color-orange;
   transition: $baseTransition;
+  transition-delay: 0.125s;
 }

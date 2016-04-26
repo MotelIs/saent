@@ -14,18 +14,66 @@
   position: fixed;
 }
 
+.distractions.active #distractions-browser {
+  transition: $baseTransition;
+  background-color: $color-orange;
+}
 
 
+.distractions-browsers {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
 
 #distractions-browser {
   width: 500px;
   height: auto;
+  border-radius: 8px;
+  background-color: $color-blue;
 }
 
 #distractions-browser--left {
   @extend #distractions-browser;
+  position: absolute;
+  left: 0;
+  transition-delay: 0.125s;
 }
 
 #distractions-browser--right {
   @extend #distractions-browser;
+  position: absolute;
+  right: 40px;
+  top: 0;
+  transition-delay: 0.125s;
+}
+
+#distractions-browser--right-bottom {
+  @extend #distractions-browser;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  transition-delay: 0.125s;
+}
+
+.distractions-browser-st18 {
+  opacity: 0;
+}
+
+
+
+.distractions-speech {
+  display: inline-block;
+  background: $color-red;
+  padding: 15px 25px;
+  border: 1px solid #FFF;
+  border-radius: 8px;
+  font-family: $fontFamily-base;
+  font-size: 18px;
+  font-weight: 300;
+  color: #FFF;
+  position: absolute;
+  top: 250px;
+  right: 300px;
+  opacity: 0;
 }

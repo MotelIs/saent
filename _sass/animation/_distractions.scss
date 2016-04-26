@@ -1,17 +1,100 @@
-@keyframes type{
-  from { width: 0; }
+
+$app-offset: 0.33;
+$tab-offset: 0.25;
+
+.line-dock-app:nth-of-type(1) .line-dock-badge{
+  transition-delay: $app-offset * 1s;
+}
+.line-dock-app:nth-of-type(8) .line-dock-badge{
+  transition-delay: $app-offset * 2s;
+}
+.line-dock-app:nth-of-type(3) .line-dock-badge{
+  transition-delay: $app-offset * 3s;
+}
+.line-dock-app:nth-of-type(9) .line-dock-badge{
+  transition-delay: $app-offset * 4s;
+}
+.line-dock-app:nth-of-type(6) .line-dock-badge{
+  transition-delay: $app-offset * 5s;
+}
+.line-dock-app:nth-of-type(5) .line-dock-badge{
+  transition-delay: $app-offset * 6s;
+}
+.line-dock-app:nth-of-type(7) .line-dock-badge{
+  transition-delay: $app-offset * 7s;
+}
+.line-dock-app:nth-of-type(2) .line-dock-badge{
+  transition-delay: $app-offset * 8s;
+}
+.line-dock-app:nth-of-type(4) .line-dock-badge{
+  transition-delay: $app-offset * 9s;
 }
 
-.type-in {
-  white-space: nowrap;
-  overflow: hidden;
-  animation: type 4s steps(60, end);
-  width: 30em;
+#distractions-browser--left .distractions-tab:nth-of-type(1) {
+  transition-delay: $tab-offset * 1s;
 }
+#distractions-browser--left .distractions-tab:nth-of-type(2) {
+  transition-delay: $tab-offset * 2s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(3) {
+  transition-delay: $tab-offset * 3s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(4) {
+  transition-delay: $tab-offset * 4s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(5) {
+  transition-delay: $tab-offset * 5s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(6) {
+  transition-delay: $tab-offset * 6s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(7) {
+  transition-delay: $tab-offset * 7s;
+}
+
+
+
+@keyframes blink {
+  0%, 100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
 
 
 
 // trigger
-[data-animation="sessions"] #sessions-type {
-  @extend .type-in;
+[data-animation="distractions"] .line-dock-badge {
+  transition: $baseTransition;
+  opacity: 1;
+}
+
+[data-animation="distractions"] .distractions-browser-st18 {
+  animation: blink 2.5s infinite;
+}
+
+[data-animation="distractions"] .distractions-tab {
+  transition: $baseTransition;
+  opacity: 1;
+}
+
+[data-animation="distractions"] .distractions-speech {
+  transition: $baseTransition;
+  transition-delay: 2s;
+  opacity: 1;
+}
+
+
+// reset animations
+.distractions:not(.active) .distractions-browsers #distractions-browser--left .distractions-tab {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.distractions:not(.active) .distractions-browsers #distractions-browser--left .distractions-tab:nth-of-type(1) {
+  opacity: 1;
+}
+
+.distractions:not(.active) .line-dock-badge {
+  opacity: 0;
+  transition-delay: 0s;
 }

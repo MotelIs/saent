@@ -19,4 +19,23 @@
   border-radius: 8px;
   width: 80px;
   height: 80px;
+  position: relative;
+}
+
+.line-dock-badge {
+  background-color: $color-red;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 13px;
+  font-family: $fontFamily-heading;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  opacity: 0;
 }
