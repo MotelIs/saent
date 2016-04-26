@@ -1,0 +1,10 @@
+.section {
+  height: calc(100vh - 120px);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.illustration {
+  @include outer-container();
+}

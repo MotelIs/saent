@@ -1,0 +1,14 @@
+.sessions {
+  @extend .section;
+  background-color: $color-blue;
+}
+
+.sessions-illustration {
+  @extend .illustration;
+}
+
+#default-browser {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: block;
+}

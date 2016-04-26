@@ -5,14 +5,21 @@
 
   <body>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="fixed-header">
+      {% include _progress-bar.html %}
+      {% include _ui.html %}
     </div>
 
-    {% include footer.html %}
+
+    <div class="page-content">
+      {{ content }}
+    </div>
 
   </body>
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/progress-bar.js"></script>
+  <script type="text/javascript" src="/data/content.js"></script>
+  <script type="text/javascript" src="/js/scroll-section.js"></script>
+  <script type="text/javascript" src="/js/dropdown.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
 </html>

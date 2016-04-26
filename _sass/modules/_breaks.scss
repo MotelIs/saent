@@ -1,0 +1,8 @@
+.breaks {
+  @extend .section;
+  background-color: $color-blue;
+}
+
+.breaks-illustration {
+  @extend .illustration;
+}

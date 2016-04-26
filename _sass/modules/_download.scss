@@ -1,0 +1,20 @@
+.download {
+  @extend .section;
+  background-color: $color-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-illustration {
+  text-align: center;
+}
+
+.download-screenshot {
+  display: inline-block;
+  max-width: 500px;
+}
+
+.download-buttons {
+  margin-bottom: 60px;
+}
