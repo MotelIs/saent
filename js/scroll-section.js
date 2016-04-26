@@ -17,7 +17,7 @@ var ScrollSection = function() {
           var newText = content[current];
 
           uiTitle.text(newText.title);
-          uiButon.text(newText.button);
+          uiButton.text(newText.button);
           uiFoldout.text(newText.foldout);
 
         } else {
@@ -31,24 +31,33 @@ var ScrollSection = function() {
         // measure off the bottom of fixed header
         top = $(window).scrollTop() + (128);
         var activeSection = ''
+        var activeSectionName = ''
 
         for(var i = 0; i < sections.length; i++) {
           var section = sections[i];
+          var sectionObj = $(section.self);
 
           // if section has scrolled passed
           if(section.top < top) {
-            activeSection = section.name;
+            activeSection = sectionObj
+            activeSectionName = section.name;
+
+
+            if(!activeSection.hasClass('active')) {
+              activeSection.addClass('active');
+            }
 
           // have not reached next section. return previous
           } else {
-            return activeSection;
+            sectionObj.removeClass('active');
+            return activeSectionName;
           }
         }
       };
 
       var runAnimation = function(newSection) {
 
-        if(current != newSection) {
+        if(current != newSection.className) {
           current = newSection;
           updateText();
         } else {
