@@ -12,4 +12,16 @@
 
 #challenges-alert {
   @extend .alert;
+  position: relative;
+  z-index: 400;
+}
+
+#challenges-browser {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.4s ease-out;
+  max-width: 1000px;
+  opacity: 0;
 }
