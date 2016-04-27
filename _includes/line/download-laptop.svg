@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 544.742 375.204" style="enable-background:new 0 0 544.742 375.204;" xml:space="preserve">
+<style type="text/css">
+	.download-st0{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#14ABE1;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.download-st1{opacity:0;}
+	.download-st2{stroke:#504D50;stroke-width:0.9903;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="download-st2" d="M504.246,305.34H40.495V6.495c0-3.3,2.7-6,6-6h451.751c3.3,0,6,2.7,6,6V305.34z"/>
+	<path class="download-st2" d="M478.246,285.34H66.495c-3.3,0-6-2.7-6-6V26.495c0-3.3,2.7-6,6-6h411.751c3.3,0,6,2.7,6,6V279.34
+		C484.246,282.64,481.546,285.34,478.246,285.34z"/>
+	<path class="download-st2" d="M40.495,305.34h463.751l40,46.832c0,1.396-2.7,2.537-6,2.537H6.495c-3.3,0-6-1.142-6-2.537L40.495,305.34z"/>
+	<path class="download-st2" d="M538.246,354.71H6.495c-3.3,0-6-1.142-6-2.537v16.537c0,3.314,2.686,6,6,6h531.751c3.314,0,6-2.686,6-6
+		v-16.537C544.246,353.568,541.546,354.71,538.246,354.71z"/>
+</g>
+</svg>

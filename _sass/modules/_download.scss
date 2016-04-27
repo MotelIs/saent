@@ -19,3 +19,22 @@
 .download-buttons {
   margin-bottom: 60px;
 }
+
+.download-st2 {
+  fill: #FFF;
+  transition: $colorTransition;
+
+}
+
+.download-laptop {
+  position: relative;
+}
+
+.download-screenshot {
+  position: absolute;
+  width: 360px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+  border-radius: 4px;
+}
