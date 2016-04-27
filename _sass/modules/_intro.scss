@@ -1,29 +1,39 @@
 .intro {
   @extend .section;
   background-color: $color-bg;
+  height: calc(100vh - 20px);
 }
 
 .intro-content {
   @include outer-container();
   display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-between;
   height: 100%;
 }
 
 .intro-text {
-  width: 50%;
+  width: 100%;
   padding-left: 90px;
   position: relative;
+
+  @include media($small-screen-up) {
+    width: 50%;
+  }
 }
 
 .intro-text h1 {
   font-family: $fontFamily--intro;
-  font-size: $fontSize--intro;
+  font-size: $fontSize--intro * $mobileFontSize;
   font-weight: $fontWeight--intro;
   color: $color-text;
   max-width: 353px;
   line-height: 1.125em;
+
+  @include media($medium-screen-up) {
+    font-size: $fontSize--intro;
+  }
 }
 
 .intro-text .logo {
@@ -39,6 +49,15 @@
 }
 
 .intro-screenshot {
-  width: 50%;
-  max-width: 546px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+
+  @include media($small-screen-up) {
+    width: 50%;
+    max-width: 260px;
+  }
+  @include media($medium-screen-up) {
+    max-width: 546px;
+  }
 }

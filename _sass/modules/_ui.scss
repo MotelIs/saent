@@ -25,25 +25,36 @@
   width: 100%;
   padding: 28px 0 0px 13px;
 
-  @include media($medium-screen-up) {
+  @include media($micro-screen-up) {
     padding: 28px 0 28px 13px;
-    width: 50%;
+    width: 40%;
+  }
+  @include media($medium-screen-up) {
+    width: 45%;
   }
 }
 
 .ui-conversation-title {
   font-family: $fontFamily--ui;
-  font-size: $fontSize--ui;
+  font-size: $fontSize--ui * $mobileFontSize;
   font-weight: $fontWeight--ui;
   color: $color-text;
   float: left;
   margin-left: 24px;
+
+  @include media($medium-screen-up) {
+    font-size: $fontSize--ui;
+  }
 }
 
 .logo {
-  width: 64px;
+  width: 50px;
   height: auto;
   float: left;
+
+  @include media($medium-screen-up) {
+    width: 64px;
+  }
 }
 
 .ui-options {
@@ -51,15 +62,18 @@
   text-align: right;
   padding: 0px 13px 28px 0;
 
-  @include media($medium-screen-up) {
-    width: 50%;
+  @include media($micro-screen-up) {
+    width: 60%;
     padding: 28px 13px 28px 0;
+  }
+  @include media($medium-screen-up) {
+    width: 55%;
   }
 }
 
 .ui-options-dropdown {
   font-family: $fontFamily--dropdown;
-  font-size: $fontSize--dropdown;
+  font-size: $fontSize--dropdown * $mobileFontSize;
   font-weight: $fontWeight--dropdown;
   color: $color-text;
   padding: 16px 41px 18px 21px;
@@ -67,8 +81,13 @@
   border-radius: 4px;
   position: relative;
   display: inline-block;
-  margin-right: 18px;
+  margin-right: 9px;
   cursor: pointer;
+
+  @include media($medium-screen-up) {
+    font-size: $fontSize--dropdown;
+    margin-right: 18px;
+  }
 
   &:after {
     content: '';
@@ -98,7 +117,7 @@
 
 .ui-options-cta {
   font-family: $fontFamily--button;
-  font-size: $fontSize--button;
+  font-size: $fontSize--button * $mobileFontSize;
   font-weight: $fontWeight--button;
   background-color: $color-blue;
   border-radius: 4px;
@@ -107,6 +126,10 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
+
+  @include media($medium-screen-up) {
+    font-size: $fontSize--button;
+  }
 
   &:after {
     content: '';
