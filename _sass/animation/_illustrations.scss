@@ -21,6 +21,10 @@
   }
 }
 
+[data-animation="distractions"] .line-dock {
+  opacity: 1;
+}
+
 [data-animation="categorizing"] #categorizing-alert {
   opacity: 1;
 }
