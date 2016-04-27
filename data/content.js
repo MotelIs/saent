@@ -38,7 +38,7 @@ var content = {
 
   "download" : {
     "title": " So give me a try and we’ll do amazing work together.",
-    "foldout": "",
-    "button": ""
+    "foldout": "Saent is building a platform to help you live a more fulfilling life. Coming soon: integrations with other apps and devices, personalized learning goals, inspirational content, and more.",
+    "button": "What Else Can Saent Do?"
   }
 };

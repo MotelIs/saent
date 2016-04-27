@@ -56,10 +56,11 @@ var ScrollSection = function() {
             return activeSectionName;
           }
         }
+        // return last section
+        return sections[sections.length - 1].name;
       };
 
       var runAnimation = function(newSection) {
-
         if(current != newSection.className) {
           current = newSection;
           updateText();

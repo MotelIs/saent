@@ -38,3 +38,12 @@
   top: 15px;
   border-radius: 4px;
 }
+
+[data-animation="download"] {
+  .ui-options {
+    display: none;
+  }
+  .ui-conversation {
+    width: 100%;
+  }
+}
