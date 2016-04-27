@@ -8,7 +8,10 @@
 }
 
 #default-browser {
-  max-width: 1000px;
+  width: 100%;
+  @include media($medium-screen-up) {
+    max-width: 1000px;
+  }
 }
 
 .sessions.active .sessions-illustration {
@@ -25,6 +28,7 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: 1000px;
+  padding: 0 50px;
 }
 
 #sessions-type {

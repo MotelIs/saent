@@ -1,8 +1,13 @@
 .section {
   height: calc(100vh - 120px);
-  padding-top: 50px;
-  padding-bottom: 50px;
   position: relative;
+  padding: 50px 13px;
+
+  @include media($large-screen-up) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
 
 .illustration {
@@ -10,12 +15,14 @@
   transition: $baseTransition;
   max-width: 100%;
   text-align: center;
+  width: 100%;
+  left: 0;
+  padding: 0 50px;
 }
 
 .illustration--active {
   position: fixed;
-  top: 178px;
-  width: 100%;
+  top: 138px;
 }
 
 .alert {

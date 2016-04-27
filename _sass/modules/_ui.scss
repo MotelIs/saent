@@ -22,8 +22,13 @@
 .ui-conversation {
   display: flex;
   align-items: center;
-  width: 50%;
-  padding: 28px 0 28px 13px;
+  width: 100%;
+  padding: 28px 0 0px 13px;
+
+  @include media($medium-screen-up) {
+    padding: 28px 0 28px 13px;
+    width: 50%;
+  }
 }
 
 .ui-conversation-title {
@@ -42,9 +47,14 @@
 }
 
 .ui-options {
-  width: 50%;
+  width: 100%;
   text-align: right;
-  padding: 28px 13px 28px 0;
+  padding: 0px 13px 28px 0;
+
+  @include media($medium-screen-up) {
+    width: 50%;
+    padding: 28px 13px 28px 0;
+  }
 }
 
 .ui-options-dropdown {

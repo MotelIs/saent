@@ -15,15 +15,18 @@
 }
 
 .distractions-browsers {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
+  @include media($full-screen-up) {
+    max-width: 1200px;
+  }
 }
 
 #distractions-browser {
-  width: 500px;
+  width: 40%;
+  max-width: 500px;
   height: auto;
-  border-radius: 8px;
   background-color: $color-blue;
   transition: $colorTransition;
 }

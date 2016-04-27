@@ -9,9 +9,9 @@
 // Neat Breakpoints
 $micro-screen: 0;
 $small-screen: 500px;
-$medium-screen: 750px;
-$large-screen: 900px;
-$full-screen: 1175px;
+$medium-screen: 900px;
+$large-screen: 1200px;
+$full-screen: 1600px;
 
 $micro-screen-only: new-breakpoint(min-width $micro-screen max-width $small-screen 4);
 $micro-screen-up: new-breakpoint(min-width $micro-screen 4);
