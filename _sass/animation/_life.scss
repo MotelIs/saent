@@ -1,0 +1,8 @@
+.life-fill {
+  fill: $color-blue;
+  transition: $colorTransition;
+}
+
+[data-animation="life"] .life-fill {
+  fill: $color-green;
+}

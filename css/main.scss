@@ -43,7 +43,7 @@ $color-magenta: #F272AA;
 $color-gray:    #BABFBF;
 
 $baseTransition: all 0.4s ease-out;
-$colorTransition: background-color 0.667s linear;
+$colorTransition: all 0.667s linear;
 $colorTransitionDelay: 0.8s;
 
 
@@ -81,3 +81,4 @@ $colorTransitionDelay: 0.8s;
 @import "animation/sessions";
 @import "animation/distractions";
 @import "animation/z-index";
+@import "animation/life";
