@@ -22,6 +22,8 @@
   width: 80px;
   height: 80px;
   position: relative;
+  transition: $colorTransition;
+
 }
 
 .line-dock-badge {

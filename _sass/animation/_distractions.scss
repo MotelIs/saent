@@ -116,6 +116,16 @@ $tab-offset: 0.25;
   opacity: 1;
 }
 
+[data-animation="distractions"] {
+  #distractions-browser--left,
+  #distractions-browser--right,
+  #distractions-browser--right-bottom {
+    background-color: $color-orange;
+    transition-delay: $colorTransitionDelay;
+  }
+}
+
+
 
 // reset animations
 .distractions:not(.active) .distractions-browsers #distractions-browser--left .distractions-tab {

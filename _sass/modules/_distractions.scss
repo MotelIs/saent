@@ -14,12 +14,6 @@
   position: fixed;
 }
 
-.distractions.active #distractions-browser {
-  transition: $baseTransition;
-  background-color: $color-orange;
-}
-
-
 .distractions-browsers {
   max-width: 1200px;
   margin: 0 auto;
@@ -31,13 +25,13 @@
   height: auto;
   border-radius: 8px;
   background-color: $color-blue;
+  transition: $colorTransition;
 }
 
 #distractions-browser--left {
   @extend #distractions-browser;
   position: absolute;
   left: 0;
-  transition-delay: 0.125s;
 }
 
 #distractions-browser--right {
@@ -45,7 +39,6 @@
   position: absolute;
   right: 40px;
   top: 0;
-  transition-delay: 0.125s;
 }
 
 #distractions-browser--right-bottom {
@@ -53,7 +46,6 @@
   position: absolute;
   right: 0;
   top: 20px;
-  transition-delay: 0.125s;
 }
 
 .distractions-browser-st18 {
