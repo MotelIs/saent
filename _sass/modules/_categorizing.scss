@@ -13,3 +13,65 @@
 #categorizing-alert {
   @extend .alert;
 }
+
+
+[data-category-alert="neutral"] {
+  .categorizing-alert-bg {
+    fill: #4F4C4F;
+  }
+}
+[data-category-alert="good"] {
+  .categorizing-alert-bg {
+    fill: $color-green;
+  }
+}
+[data-category-alert="evil"] {
+  .categorizing-alert-bg {
+    fill: $color-red;
+  }
+}
+
+[data-button] {
+  cursor: pointer
+}
+
+[data-category-alert]:not(.active) {
+  opacity: 0.85;
+  .categorizing-alert-bg {
+    fill: #F6F4F4;
+  }
+  .categorizing-st10,
+  .categorizing-st2 {
+    stroke: #4F4C4F;
+  }
+  .categorizing-st5 {
+    fill: #4F4C4F;
+  }
+}
+
+[data-category-alert="good"] {
+  .category-button-outline[data-category="good"] {
+    fill: #F6F4F4;
+  }
+  .category-button-text[data-category="good"]{
+    fill: $color-green;
+  }
+}
+
+[data-category-alert="neutral"] {
+  .category-button-outline[data-category="neutral"] {
+    fill: #F6F4F4;
+  }
+  .category-button-text[data-category="neutral"]{
+    fill: #4F4C4F;
+  }
+}
+
+[data-category-alert="evil"] {
+  .category-button-outline[data-category="evil"] {
+    fill: #F6F4F4;
+  }
+  .category-button-text[data-category="evil"]{
+    fill: $color-red;
+  }
+}
