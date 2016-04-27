@@ -1,3 +1,8 @@
+@keyframes to-green-screen {
+  from { background-color: $color-blue }
+  to { background-color: $color-green }
+}
+
 .breaks-alert {
   transition: $baseTransition;
   opacity: 0;
@@ -17,8 +22,7 @@
 }
 
 [data-animation="breaks"] {
-  background-color: $color-green;
-  transition-delay: 4s;
+  animation: to-green-screen 2s normal 4s forwards ease-out;
 
 
   .breaks-alert,

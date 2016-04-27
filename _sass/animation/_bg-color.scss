@@ -1,6 +1,7 @@
 .animation {
   background-color: $color-blue;
   transition: $colorTransition;
+  transition-delay: 0s;
 
   &[data-animation="distractions"] {
     background-color: $color-orange;
