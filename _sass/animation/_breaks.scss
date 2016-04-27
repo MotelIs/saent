@@ -1,0 +1,43 @@
+.breaks-alert {
+  transition: $baseTransition;
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.breaks-alert--3 {
+  @extend .breaks-alert;
+}
+
+.breaks-alert--2 {
+  @extend .breaks-alert;
+}
+
+.breaks-alert--1 {
+  @extend .breaks-alert;
+}
+
+[data-animation="breaks"] {
+  background-color: $color-green;
+  transition-delay: 4s;
+
+
+  .breaks-alert,
+  .breaks-alert--3,
+  .breaks-alert--2,
+  .breaks-alert--1 {
+    opacity: 1;
+  }
+
+  .breaks-alert--3 {
+    transition-delay: 1s;
+  }
+
+  .breaks-alert--2 {
+    transition-delay: 2s;
+  }
+
+  .breaks-alert--1 {
+    transition-delay: 3s;
+  }
+
+}
