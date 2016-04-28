@@ -29,9 +29,12 @@
   opacity: 1;
 }
 
-[data-animation="challenges"] #challenges-alert,
-[data-animation="challenges"] #challenges-browser {
-  opacity: 1;
+[data-animation="challenges"] {
+  #challenges-alert,
+  #challenges-alert--mobile,
+  #challenges-browser {
+    opacity: 1;
+  }
 }
 
 [data-animation="breaks"] {

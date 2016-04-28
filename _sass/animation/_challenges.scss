@@ -2,7 +2,8 @@
   transition: opacity 0.8s ease-out;
 }
 
-[data-animation="challenges"] #challenges-alert {
+[data-animation="challenges"] #challenges-alert,
+ [data-animation="challenges"] #challenges-alert--mobile,{
   transition-delay: 2s;
 }
 

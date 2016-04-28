@@ -14,6 +14,22 @@
   @extend .alert;
   position: relative;
   z-index: 400;
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: initial
+  }
+}
+
+#challenges-alert--mobile {
+  @extend .alert;
+  position: relative;
+  z-index: 400;
+  display: block;
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
 }
 
 #challenges-browser {
