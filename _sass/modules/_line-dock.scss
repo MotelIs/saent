@@ -11,7 +11,7 @@
 .line-dock ul {
   @include outer-container(1000px);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: -20px;
 }
 
@@ -19,16 +19,30 @@
   background-color: $color-blue;
   border: 1px solid #FFF;
   border-radius: 8px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   position: relative;
   transition: $colorTransition;
+  margin: 0 10px;
+
+  @include media($medium-screen-up)  {
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+  }
 
   @include media($full-screen-up)  {
     width: 80px;
     height: 80px;
   }
 
+
+  &:nth-of-type(n+5) {
+    display: none;
+    @include media($medium-screen-up) {
+      display: block;
+    }
+  }
 }
 
 .line-dock-badge {
