@@ -18,7 +18,7 @@ var ScrollSection = function() {
           var newText = content[current];
 
           uiTitle.text(newText.title);
-          uiButton.text(newText.button);
+          uiButton.html(newText.button);
           uiFoldout.text(newText.foldout);
 
         } else {

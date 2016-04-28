@@ -17,16 +17,30 @@
   text-align: center;
   width: 100%;
   left: 0;
-  padding: 0 50px;
+  padding: 0 15px;
+  top: 188px;
+
+  @include media($medium-screen-up) {
+    top: 138px;
+    padding: 0 50px;
+  }
+
 }
 
 .illustration--active {
   position: fixed;
-  top: 138px;
 }
 
 .alert {
   transition: $baseTransition;
   max-width: 1200px;
   opacity: 0;
+}
+
+.mobile-hidden {
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: initial;
+  }
 }
