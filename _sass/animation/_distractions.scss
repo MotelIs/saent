@@ -55,23 +55,34 @@ $tab-offset: 0.25;
 .distractions-speech {
   display: inline-block;
   background: $color-red;
-  padding: 15px 25px;
+  padding: 10px 15px;
   border: 1px solid #FFF;
   border-radius: 8px;
   font-family: $fontFamily-base;
-  font-size: 18px;
+  font-size: 18px * $mobileFontSize;
   font-weight: 300;
   color: #FFF;
   position: absolute;
   opacity: 0;
   transition: $baseTransition;
+  z-index: 500;
+
+  @include media($medium-screen-up) {
+    font-size: 18px;
+    padding: 15px 25px;
+  }
 }
 
 .distractions-speech--hello {
   @extend .distractions-speech;
-  top: 250px;
-  right: 300px;
+  top: 150px;
+  right: 200px;
   transition-delay: 2s;
+
+  @include media($medium-screen-up) {
+    top: 250px;
+    right: 300px;
+  }
 }
 
 .distractions-speech--here {
@@ -88,9 +99,14 @@ $tab-offset: 0.25;
 
 .distractions-speech--do {
   @extend .distractions-speech;
-  top: 130px;
-  left: 50px;
+  top: 220px;
+  left: 200px;
   transition-delay: 2.125s;
+
+  @include media($medium-screen-up) {
+    left: 50px;
+    top: 135px;
+  }
 }
 
 
