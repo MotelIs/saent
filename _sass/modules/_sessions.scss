@@ -28,13 +28,17 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: 1000px;
-  padding: 0 50px;
+  padding: 0 15px;
 }
 
 #sessions-type {
   color: #FFF;
   font-family: "Courier";
-  font-size: 18px;
-  padding: 80px 30px;
+  font-size: 12px;
+  padding: 80px 10px;
   text-align: left;
+
+  @include media($medium-screen-up) {
+    font-size: 18px;
+  }
 }

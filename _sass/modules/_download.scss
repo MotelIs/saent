@@ -28,10 +28,10 @@
 .download-screenshot {
   display: inline-block;
   position: absolute;
-  width: 290px;
+  width: 258px;
   left: 50%;
   transform: translateX(-50%);
-  top: 13px;
+  top: 12px;
   border-radius: 4px;
 
   @include media($medium-screen-up) {
