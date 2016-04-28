@@ -137,8 +137,12 @@
   color: #FFF;
   padding: 14px 30px 16px 11px;
   position: relative;
-  display: inline-block;
+  display: none;
   cursor: pointer;
+
+  @include media($small-screen-up) {
+    display: inline-block;
+  }
 
   @include media($medium-screen-up) {
     padding: 18px 44px 18px 16px;
@@ -180,6 +184,23 @@
         border-bottom: 13px solid #FFF;
       }
     }
+  }
+}
+
+.ui-options-signup {
+  font-family: $fontFamily--button;
+  font-size: $fontSize--button * $mobileFontSize;
+  font-weight: $fontWeight--button;
+  background-color: $color-blue;
+  border-radius: 4px;
+  color: #FFF;
+  padding: 14px 16px 16px 16px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  @include media($small-screen-up) {
+    display: none
   }
 }
 
