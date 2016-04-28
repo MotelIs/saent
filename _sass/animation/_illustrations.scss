@@ -34,8 +34,11 @@
   opacity: 1;
 }
 
-[data-animation="breaks"] #breaks-alert {
-  opacity: 1;
+[data-animation="breaks"] {
+  #breaks-alert,
+  #breaks-alert--mobile {
+    opacity: 1;
+  }
 }
 
 [data-animation="life"] #life-scene {
