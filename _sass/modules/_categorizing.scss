@@ -12,6 +12,20 @@
 
 #categorizing-alert {
   @extend .alert;
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: initial
+  }
+}
+
+#categorizing-alert--mobile {
+  @extend .alert;
+  display: block;
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
 }
 
 
