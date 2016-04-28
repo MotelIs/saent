@@ -1,7 +1,11 @@
 .intro {
   @extend .section;
   background-color: $color-bg;
-  height: calc(100vh - 20px);
+  height: calc(100vh - 100px);
+
+  @include media($medium-screen-up) {
+    height: calc(100vh - 20px);
+  }
 }
 
 .intro-content {
@@ -15,10 +19,11 @@
 
 .intro-text {
   width: 100%;
-  padding-left: 90px;
+  padding-left: 80px;
   position: relative;
 
   @include media($small-screen-up) {
+    padding-left: 90px;
     width: 50%;
   }
 }
@@ -38,14 +43,22 @@
 
 .intro-text .logo {
   position: absolute;
-  left: 0;
+  left: 10px;
+
+  @include media($medium-screen-up) {
+    left: 0;
+  }
 }
 
 .intro-text .brand {
   color: $color-blue;
   font-weight: 400;
-  margin-bottom: 46px;
+  margin-bottom: 20px;
   display: inline-block;
+
+  @include media($medium-screen-up) {
+    margin-bottom: 46px;
+  }
 }
 
 .intro-screenshot {

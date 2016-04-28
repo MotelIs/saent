@@ -13,6 +13,12 @@
 
 .download-buttons {
   margin-bottom: 60px;
+
+  .btn {
+    @include media($mobile-screens) {
+      display: block;
+    }
+  }
 }
 
 .download-st2 {
@@ -23,16 +29,29 @@
 
 .download-laptop {
   position: relative;
+  width: 200px;
+
+  @include media($small-screen-up) {
+    width: 300px;
+  }
+  @include media($medium-screen-up) {
+    width: auto;
+  }
 }
 
 .download-screenshot {
   display: inline-block;
   position: absolute;
-  width: 258px;
+  width: 158px;
   left: 50%;
   transform: translateX(-50%);
-  top: 12px;
+  top: 7px;
   border-radius: 4px;
+
+  @include media($small-screen-up) {
+    width: 238px;
+    top: 9px;
+  }
 
   @include media($medium-screen-up) {
     top: 15px;
