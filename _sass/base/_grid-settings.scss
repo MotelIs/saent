@@ -9,15 +9,19 @@
 // Neat Breakpoints
 $micro-screen: 0;
 $small-screen: 450px;
-$medium-screen: 900px;
+$tablet-screen: 750px;
+$medium-screen: 955px;
 $large-screen: 1200px;
 $full-screen: 1600px;
 
 $micro-screen-only: new-breakpoint(min-width $micro-screen max-width $small-screen 4);
 $micro-screen-up: new-breakpoint(min-width $micro-screen 4);
 
-$small-screen-only: new-breakpoint(min-width $small-screen max-width $medium-screen 4);
+$small-screen-only: new-breakpoint(min-width $small-screen max-width $tablet-screen 4);
 $small-screen-up: new-breakpoint(min-width $small-screen 4);
+
+$tablet-screen-only: new-breakpoint(min-width $tablet-screen max-width $medium-screen 4);
+$tablet-screen-up: new-breakpoint(min-width $tablet-screen 4);
 
 $medium-screen-only: new-breakpoint(min-width $medium-screen max-width $large-screen 8);
 $medium-screen-up: new-breakpoint(min-width $medium-screen 8);

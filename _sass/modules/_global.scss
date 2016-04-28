@@ -33,8 +33,27 @@
 
 .alert {
   transition: $baseTransition;
-  max-width: 1200px;
   opacity: 0;
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @include media($tablet-screen-up) {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  @include media($medium-screen-up) {
+    max-width: 1200px;
+  }
+}
+
+.browser {
+  width: 100%;
+  @include media($mobile-screens) {
+    max-width: 650px;
+  }
+  @include media($large-screen-up) {
+    max-width: 1000px;
+  }
 }
 
 .mobile-hidden {

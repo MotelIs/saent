@@ -8,10 +8,7 @@
 }
 
 #default-browser {
-  width: 100%;
-  @include media($medium-screen-up) {
-    max-width: 1000px;
-  }
+  @extend .browser;
 }
 
 .sessions.active .sessions-illustration {
@@ -22,13 +19,16 @@
 
 
 .sessions-browser-content {
+  @extend .browser;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 1000px;
   padding: 0 15px;
+
+  @include media($medium-screen-only) {
+    padding: 0 65px;
+  }
 }
 
 #sessions-type {
