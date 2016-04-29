@@ -16,7 +16,7 @@
 }
 
 .browser-st3 {
-  fill:#F272AA;
+  fill:$color-magenta;
   stroke:#FFFFFF;
   stroke-miterlimit:10;
 }
@@ -36,7 +36,7 @@
 }
 
 .browser-st7 {
-  fill:#7AC442;
+  fill:$color-green;
   stroke:#FFFFFF;
   stroke-miterlimit:10;
 }
@@ -46,7 +46,7 @@
 }
 
 .browser-st9 {
-  fill:#E8212D;
+  fill:$color-red;
   stroke:#FFFFFF;
   stroke-miterlimit:10;
 }
@@ -63,7 +63,7 @@
 }
 
 .browser-st12 {
-  fill:#4F4C4F;
+  fill:$color-text;
   stroke:#FFFFFF;
   stroke-miterlimit:10;
 }
@@ -78,7 +78,7 @@
 
 .browser-st15 {
   fill:none;
-  stroke:#4F4C4F;
+  stroke:$color-text;
   stroke-linecap:square;
   stroke-linejoin:bevel;
   stroke-miterlimit:10;

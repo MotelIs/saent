@@ -31,7 +31,7 @@
 
 [data-category-alert="neutral"] {
   .categorizing-alert-bg {
-    fill: #4F4C4F;
+    fill: $color-text;
   }
 }
 [data-category-alert="good"] {
@@ -56,10 +56,10 @@
   }
   .categorizing-st10,
   .categorizing-st2 {
-    stroke: #4F4C4F;
+    stroke: $color-text;
   }
   .categorizing-st5 {
-    fill: #4F4C4F;
+    fill: $color-text;
   }
 }
 
@@ -77,7 +77,7 @@
     fill: #F6F4F4;
   }
   .category-button-text[data-category="neutral"]{
-    fill: #4F4C4F;
+    fill: $color-text;
   }
 }
 

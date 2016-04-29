@@ -1,5 +1,5 @@
 .challenges-mobile-st0 {
-  fill:#F272AA;
+  fill:$color-magenta;
   stroke:#FFFFFF;
   stroke-width:0.2895;
   stroke-miterlimit:10;
@@ -38,7 +38,7 @@
 }
 
 .challenges-alert-st3 {
-  fill:#F272AA;
+  fill:$color-magenta;
   stroke:#FFFFFF;
   stroke-miterlimit:10;
 }
@@ -58,7 +58,7 @@
 }
 
 .challenges-alert-st7 {
-  fill:#7AC442;
+  fill:$color-green;
   stroke:#FFFFFF;
   stroke-miterlimit:10;
 }
@@ -68,7 +68,7 @@
 }
 
 .challenges-alert-st9 {
-  fill:#E8212D;
+  fill:$color-red;
   stroke:#FFFFFF;
   stroke-miterlimit:10;
 }
@@ -85,7 +85,7 @@
 }
 
 .challenges-alert-st12 {
-  fill:#4F4C4F;
+  fill:$color-text;
   stroke:#FFFFFF;
   stroke-miterlimit:10;
 }
@@ -100,7 +100,7 @@
 
 .challenges-alert-st15 {
   fill:none;
-  stroke:#4F4C4F;
+  stroke:$color-text;
   stroke-linecap:square;
   stroke-linejoin:bevel;
   stroke-miterlimit:10;
