@@ -52,7 +52,7 @@
 [data-category-alert]:not(.active) {
   opacity: 0.85;
   .categorizing-alert-bg {
-    fill: #F6F4F4;
+    fill: $color-whiteish;
   }
   .categorizing-st10,
   .categorizing-st2 {
@@ -65,7 +65,7 @@
 
 [data-category-alert="good"] {
   .category-button-outline[data-category="good"] {
-    fill: #F6F4F4;
+    fill: $color-whiteish;
   }
   .category-button-text[data-category="good"]{
     fill: $color-green;
@@ -74,7 +74,7 @@
 
 [data-category-alert="neutral"] {
   .category-button-outline[data-category="neutral"] {
-    fill: #F6F4F4;
+    fill: $color-whiteish;
   }
   .category-button-text[data-category="neutral"]{
     fill: $color-text;
@@ -83,7 +83,7 @@
 
 [data-category-alert="evil"] {
   .category-button-outline[data-category="evil"] {
-    fill: #F6F4F4;
+    fill: $color-whiteish;
   }
   .category-button-text[data-category="evil"]{
     fill: $color-red;
