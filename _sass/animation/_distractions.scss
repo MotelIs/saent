@@ -1,7 +1,4 @@
 
-$app-offset: 0.33;
-$tab-offset: 0.25;
-
 .line-dock-app:nth-of-type(1) .line-dock-badge{
   transition-delay: $app-offset * 1s;
 }
