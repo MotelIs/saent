@@ -15,7 +15,7 @@
   display: none;
 
   @include media($medium-screen-up) {
-    display: initial
+    display: initial;
   }
 }
 
@@ -46,7 +46,7 @@
 }
 
 [data-button] {
-  cursor: pointer
+  cursor: pointer;
 }
 
 [data-category-alert]:not(.active) {
