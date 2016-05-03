@@ -5,7 +5,7 @@
 
   &[data-animation="distractions"] {
     background-color: $color-orange;
-    transition-delay: $colorTransitionDelay;
+    transition-delay: $distractionsTransitionDelay;
   }
 
   &[data-animation="life"] {
