@@ -4,8 +4,10 @@
 }
 
 [data-animation="challenges"] #challenges-alert,
- [data-animation="challenges"] #challenges-alert--mobile,{
+[data-animation="challenges"] #challenges-alert--mobile,
+[data-animation="challenges"] .alert--challenges {
   transition-delay: 2s;
+  opacity: 1;
 }
 
 

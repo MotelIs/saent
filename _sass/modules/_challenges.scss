@@ -10,6 +10,11 @@
   @extend .illustration--active;
 }
 
+.alert--challenges {
+  @extend .alert-background;
+  background-color: $color-magenta;
+}
+
 #challenges-alert {
   @extend .alert;
   position: relative;
