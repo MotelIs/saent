@@ -10,20 +10,11 @@
   @extend .illustration--active;
 }
 
-#breaks-alert {
+.breaks-alert {
   @extend .alert;
-  display: none;
-
-  @include media($medium-screen-up) {
-    display: initial
-  }
+  min-width: 900px;
 }
 
-#breaks-alert--mobile {
-  @extend .alert;
-  display: block;
-
-  @include media($medium-screen-up) {
-    display: none;
-  }
+.alert--breaks {
+  @extend .alert-background;
 }

@@ -3,44 +3,53 @@
   to { background-color: $color-green }
 }
 
-.breaks-alert {
+.alert-bar-breaks {
   transition: $baseTransition;
   opacity: 0;
   transition-delay: 0s;
+  background-color: $color-green;
+  border: 1px solid #FFF;
 }
 
-.breaks-alert--3 {
-  @extend .breaks-alert;
+.alert-bar-breaks--starting {
+  @extend .alert-bar-breaks;
 }
 
-.breaks-alert--2 {
-  @extend .breaks-alert;
+.alert-bar-breaks--3 {
+  @extend .alert-bar-breaks;
+  margin-top: 5px;
 }
 
-.breaks-alert--1 {
-  @extend .breaks-alert;
+.alert-bar-breaks--2 {
+  @extend .alert-bar-breaks;
+  margin-top: 5px;
+}
+
+.alert-bar-breaks--1 {
+  @extend .alert-bar-breaks;
+  margin-top: 5px;
 }
 
 [data-animation="breaks"] {
   animation: to-green-screen 2s normal 4s forwards ease-out;
 
 
-  .breaks-alert,
-  .breaks-alert--3,
-  .breaks-alert--2,
-  .breaks-alert--1 {
+  .alert-bar-breaks--starting,
+  .alert-bar-breaks--3,
+  .alert-bar-breaks--2,
+  .alert-bar-breaks--1 {
     opacity: 1;
   }
 
-  .breaks-alert--3 {
+  .alert-bar-breaks--3 {
     transition-delay: 1s;
   }
 
-  .breaks-alert--2 {
+  .alert-bar-breaks--2 {
     transition-delay: 2s;
   }
 
-  .breaks-alert--1 {
+  .alert-bar-breaks--1 {
     transition-delay: 3s;
   }
 

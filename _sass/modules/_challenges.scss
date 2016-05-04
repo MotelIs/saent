@@ -13,6 +13,7 @@
 .alert--challenges {
   @extend .alert-background;
   background-color: $color-magenta;
+  opacity: 0 ;
 }
 
 #challenges-alert {
