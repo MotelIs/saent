@@ -16,7 +16,7 @@
 
 .distractions-browsers {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   position: relative;
   @include media($full-screen-up) {
     max-width: 1200px;
