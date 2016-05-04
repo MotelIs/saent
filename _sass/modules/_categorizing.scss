@@ -10,7 +10,7 @@
   @extend .illustration--active;
 }
 
-#categorizing-alert {
+.categorizing-alert {
   @extend .alert;
   display: none;
 
@@ -28,18 +28,25 @@
   }
 }
 
+.alert-categorizing {
+  @extend .alert-background;
+}
+
 
 [data-category-alert="neutral"] {
+  background-color: $color-text;
   .categorizing-alert-bg {
     fill: $color-text;
   }
 }
 [data-category-alert="good"] {
+  background-color: $color-green;
   .categorizing-alert-bg {
     fill: $color-green;
   }
 }
 [data-category-alert="evil"] {
+  background-color: $color-red;
   .categorizing-alert-bg {
     fill: $color-red;
   }

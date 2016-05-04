@@ -49,23 +49,25 @@
 
 
 .categorizing-st0 {
-  fill:$color-green;
-  stroke:$color-white;
+  fill:$color-white;
+  stroke:none;
   stroke-miterlimit:10;
 }
 
 .categorizing-st1 {
-  opacity:0.97;
+  // opacity:0.97;
+  stroke: #FFF;
+  fill: rgba(0,0,0,0);
 }
 
 .categorizing-st2 {
-  fill:rgba(0,0,0,0);
-  stroke:$color-whiteish;
+  fill:$color-white;
+  stroke:none;
 }
 
 .categorizing-st3 {
-  fill:$color-red;
-  stroke:$color-white;
+  fill:$color-green;
+  stroke:none;
   stroke-miterlimit:10;
 }
 
@@ -73,11 +75,12 @@
   fill:#F9F7F7;
   stroke:$color-white;
   stroke-miterlimit:10;
-  enable-background:new
+  enable-background:new;
 }
 
 .categorizing-st5 {
-  fill:$color-whiteish;
+  fill:none;
+  stroke:$color-whiteish;
 }
 
 .categorizing-st6 {
