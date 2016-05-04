@@ -1,5 +1,6 @@
-[data-animation="challenges"] #challenges-browser {
+[data-animation="challenges"] .challenges-browser-part {
   transition: opacity 0.8s ease-out;
+  opacity: 1;
 }
 
 [data-animation="challenges"] #challenges-alert,

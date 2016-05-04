@@ -32,16 +32,6 @@
   }
 }
 
-#challenges-browser {
-  @extend .browser;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity 0.4s ease-out;
+.challenges-browser-part {
   opacity: 0;
-
-  @include media($medium-screen-only) {
-    padding: 0 50px;
-  }
 }
