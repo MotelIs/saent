@@ -53,6 +53,12 @@ var ScrollSection = function() {
           } else {
             sectionObj.removeClass('active');
             animation.attr('data-animation', activeSectionName)
+
+            // initialize categorizing animation
+            if(activeSectionName === 'categorizing') {
+              categorizingDemo();
+            }
+            
             return activeSectionName;
           }
         }
@@ -89,6 +95,47 @@ var ScrollSection = function() {
       });
 
   })
+
+  //---
+  // Animation for inactive alert
+
+  var categorizingDemo = function() {
+
+    var stopAnimation = false,
+        inactiveAlert = $('[data-category-alert]:not(.active)')
+
+    if(inactiveAlert.length) {
+      inactiveAlert.removeClass('active');
+      // make sure it's set to active
+      var existingClass = inactiveAlert.attr('class')
+      if(existingClass.indexOf('active') < 0) {
+        inactiveAlert.attr('class', existingClass + ' active')
+      }
+
+      window.setTimeout(function(){
+        if(!stopAnimation) {
+          inactiveAlert.attr('data-category-alert', 'good');
+        }
+      }, 1000);
+      window.setTimeout(function(){
+        if(!stopAnimation) {
+          inactiveAlert.attr('data-category-alert', 'neutral');
+        }
+      }, 2500);
+      window.setTimeout(function(){
+        if(!stopAnimation) {
+          inactiveAlert.attr('data-category-alert', 'evil');
+        }
+      }, 4000);
+      window.setTimeout(function(){
+        if(!stopAnimation) {
+          inactiveAlert.attr('data-category-alert', 'good');
+        }
+      }, 5500);
+    }
+
+
+  };
 };
 
 
