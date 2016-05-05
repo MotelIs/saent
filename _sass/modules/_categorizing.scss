@@ -52,6 +52,25 @@
   margin-top: 5px;
 }
 
+.alert-bar--categorizing-mobile {
+  @extend .alert-bar;
+  display: block;
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
+}
+
+.alert-bar--categorizing-mobile--gmail {
+  @extend .alert-bar--categorizing-mobile;
+}
+.alert-bar--categorizing-mobile--writer,
+.alert-bar--categorizing-mobile--sketch,
+.alert-bar--categorizing-mobile--steam {
+  @extend .alert-bar--categorizing-mobile;
+  margin-top: 5px;
+}
+
 
 //--
 // Inactive Alert Bar
