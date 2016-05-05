@@ -4,11 +4,9 @@
 }
 
 .alert-bar-breaks {
-  transition: $baseTransition;
-  opacity: 0;
-  transition-delay: 0s;
+  @extend .alert-bar;
   background-color: $color-green;
-  border: 1px solid #FFF;
+  opacity: 0;
 }
 
 .alert-bar-breaks--starting {

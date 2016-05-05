@@ -52,11 +52,16 @@
 
 .alert-background {
   transition: $baseTransition;
-  // opacity: 0;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.alert-bar {
+  transition: $baseTransition;
+  transition-delay: 0s;
+  border: 1px solid #FFF;
 }
 
 .browser {

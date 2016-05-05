@@ -10,15 +10,6 @@
   @extend .illustration--active;
 }
 
-.categorizing-alert {
-  @extend .alert;
-  display: none;
-
-  @include media($medium-screen-up) {
-    display: initial;
-  }
-}
-
 #categorizing-alert--mobile {
   @extend .alert;
   display: block;
@@ -30,6 +21,27 @@
 
 .alert-categorizing {
   @extend .alert-background;
+  opacity: 0;
+}
+
+.alert-bar-categorizing {
+  @extend .alert-bar;
+  display: none;
+  opacity: 1;
+
+  @include media($medium-screen-up) {
+    display: block;
+  }
+}
+
+.alert-bar-categorizing--gmail {
+  @extend .alert-bar-categorizing;
+}
+.alert-bar-categorizing--writer,
+.alert-bar-categorizing--sketch,
+.alert-bar-categorizing--steam {
+  @extend .alert-bar-categorizing;
+  margin-top: 5px;
 }
 
 
