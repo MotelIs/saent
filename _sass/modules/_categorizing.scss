@@ -19,12 +19,20 @@
   }
 }
 
-.alert-categorizing {
+
+//---
+// Categorizing Alert Area
+
+.alert--categorizing {
   @extend .alert-background;
   opacity: 0;
 }
 
-.alert-bar-categorizing {
+
+//---
+// Single Categorizing Alert Bar
+
+.alert-bar--categorizing {
   @extend .alert-bar;
   display: none;
   opacity: 1;
@@ -34,55 +42,49 @@
   }
 }
 
-.alert-bar-categorizing--gmail {
-  @extend .alert-bar-categorizing;
+.alert-bar--categorizing--gmail {
+  @extend .alert-bar--categorizing;
 }
-.alert-bar-categorizing--writer,
-.alert-bar-categorizing--sketch,
-.alert-bar-categorizing--steam {
-  @extend .alert-bar-categorizing;
+.alert-bar--categorizing--writer,
+.alert-bar--categorizing--sketch,
+.alert-bar--categorizing--steam {
+  @extend .alert-bar--categorizing;
   margin-top: 5px;
 }
 
 
-[data-category-alert="neutral"] {
-  background-color: $color-text;
+//--
+// Inactive Alert Bar
+
+[data-category-alert]:not(.active) {
+  opacity: 0.85;
+  background-color: $color-whiteish;
   .categorizing-alert-bg {
+    fill: $color-whiteish;
+  }
+  .categorizing-st1,
+  .categorizing-st5 {
+    stroke: $color-text;
+  }
+  .categorizing-st0 {
     fill: $color-text;
   }
 }
-[data-category-alert="good"] {
-  background-color: $color-green;
-  .categorizing-alert-bg {
-    fill: $color-green;
-  }
-}
-[data-category-alert="evil"] {
-  background-color: $color-red;
-  .categorizing-alert-bg {
-    fill: $color-red;
-  }
-}
+
+
+//---
+// Interactions
 
 [data-button] {
   cursor: pointer;
 }
 
-[data-category-alert]:not(.active) {
-  opacity: 0.85;
-  .categorizing-alert-bg {
-    fill: $color-whiteish;
-  }
-  .categorizing-st10,
-  .categorizing-st2 {
-    stroke: $color-text;
-  }
-  .categorizing-st5 {
-    fill: $color-text;
-  }
-}
 
-[data-category-alert="good"] {
+// ---
+// Active Category Button States
+
+.category-is-good {
+  background-color: $color-green;
   .category-button-outline[data-category="good"] {
     fill: $color-whiteish;
   }
@@ -91,7 +93,8 @@
   }
 }
 
-[data-category-alert="neutral"] {
+.category-is-neutral {
+  background-color: $color-text;
   .category-button-outline[data-category="neutral"] {
     fill: $color-whiteish;
   }
@@ -100,11 +103,25 @@
   }
 }
 
-[data-category-alert="evil"] {
+.category-is-evil {
+  background-color: $color-red;
   .category-button-outline[data-category="evil"] {
     fill: $color-whiteish;
   }
   .category-button-text[data-category="evil"]{
     fill: $color-red;
   }
+}
+
+
+[data-category-alert="good"] {
+  @extend .category-is-good;
+}
+
+[data-category-alert="neutral"] {
+  @extend .category-is-neutral;
+}
+
+[data-category-alert="evil"] {
+  @extend .category-is-evil;
 }
