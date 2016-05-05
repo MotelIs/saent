@@ -45,16 +45,16 @@
   width: 158px;
   left: 50%;
   transform: translateX(-50%);
-  top: 7px;
+  top: 8px;
   border-radius: 4px;
 
   @include media($small-screen-up) {
     width: 238px;
-    top: 9px;
+    top: 10px;
   }
 
   @include media($medium-screen-up) {
-    top: 15px;
+    top: 20px;
     width: 360px;
   }
 }
