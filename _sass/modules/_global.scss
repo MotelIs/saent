@@ -18,14 +18,14 @@
   width: 100%;
   left: 0;
   padding: 0 15px;
-  top: 150px;
+  top: 145px;
 
   @include media($small-screen-up) {
-    top: 124px;
+    top: 119px;
   }
 
   @include media($medium-screen-up) {
-    top: 138px;
+    top: 133px;
     padding: 0 50px;
   }
 
