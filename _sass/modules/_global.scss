@@ -38,8 +38,6 @@
 .alert {
   transition: $baseTransition;
   opacity: 0;
-  margin-left: -16px;
-  margin-right: -16px;
 
   @include media($tablet-screen-up) {
     margin: 0 auto;
@@ -62,6 +60,7 @@
   transition: $baseTransition;
   transition-delay: 0s;
   border: 1px solid #FFF;
+  overflow: hidden;
 }
 
 .browser {
