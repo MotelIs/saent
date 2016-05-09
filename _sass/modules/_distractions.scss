@@ -1,25 +1,65 @@
 .distractions {
   @extend .section;
-  background-color: $color-orange;
 }
 
 .distractions-illustration {
   @extend .illustration;
 }
 
+.distractions.active .distractions-illustration {
+  @extend .illustration--active;
+}
+
+.distractions.active .line-dock {
+  position: fixed;
+}
+
+.distractions-browsers {
+  max-width: 1000px;
+  margin: 30px auto 0 auto;
+  position: relative;
+  @include media($full-screen-up) {
+    max-width: 1200px;
+  }
+}
+
 #distractions-browser {
-  width: 500px;
+  width: 70%;
+  max-width: 500px;
   height: auto;
+  background-color: $color-blue;
+  transition: $colorTransition;
+
+  @include media($medium-screen-up) {
+    width: 40%;
+  }
 }
 
 #distractions-browser--left {
   @extend #distractions-browser;
+  position: absolute;
+  left: 0;
+
+  @include media($mobile-screens) {
+    top: 60px;
+    z-index: 400;
+  }
 }
 
 #distractions-browser--right {
   @extend #distractions-browser;
+  position: absolute;
+  right: 40px;
+  top: 0;
 }
 
-.distractions .line-dock-app {
-  background-color: $color-orange;
+#distractions-browser--right-bottom {
+  @extend #distractions-browser;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.distractions-browser-st18 {
+  opacity: 0;
 }

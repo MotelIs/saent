@@ -1,44 +1,76 @@
 .intro {
   @extend .section;
   background-color: $color-bg;
+  height: calc(100vh - 100px);
+
+  @include media($medium-screen-up) {
+    height: calc(100vh - 20px);
+  }
 }
 
 .intro-content {
   @include outer-container();
   display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-between;
   height: 100%;
 }
 
 .intro-text {
-  width: 50%;
-  padding-left: 90px;
+  width: 100%;
+  padding-left: 80px;
   position: relative;
+
+  @include media($small-screen-up) {
+    padding-left: 90px;
+    width: 50%;
+  }
 }
 
 .intro-text h1 {
   font-family: $fontFamily--intro;
-  font-size: $fontSize--intro;
+  font-size: $fontSize--intro * $mobileFontSize;
   font-weight: $fontWeight--intro;
   color: $color-text;
   max-width: 353px;
   line-height: 1.125em;
+
+  @include media($medium-screen-up) {
+    font-size: $fontSize--intro;
+  }
 }
 
 .intro-text .logo {
   position: absolute;
-  left: 0;
+  left: 10px;
+
+  @include media($medium-screen-up) {
+    left: 0;
+  }
 }
 
 .intro-text .brand {
   color: $color-blue;
   font-weight: 400;
-  margin-bottom: 46px;
+  margin-bottom: 20px;
   display: inline-block;
+
+  @include media($medium-screen-up) {
+    margin-bottom: 46px;
+  }
 }
 
 .intro-screenshot {
-  width: 50%;
-  max-width: 546px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+
+  @include media($small-screen-up) {
+    width: 50%;
+    max-width: 260px;
+  }
+  @include media($medium-screen-up) {
+    max-width: 546px;
+  }
 }

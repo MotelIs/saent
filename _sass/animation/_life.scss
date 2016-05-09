@@ -1,0 +1,72 @@
+.life-fill {
+  fill: $color-blue;
+  transition: $colorTransition;
+}
+
+[data-animation="life"] .life-fill {
+  fill: $color-green;
+}
+
+
+//---
+// wave animations
+
+@keyframes waves-waving {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+
+}
+
+[data-animation="life"] {
+  .waves--slow {
+    animation: waves-waving 11s ease-in-out infinite forwards;
+    opacity: 0;
+    animation-delay: -4s;
+  }
+
+  .waves--medium {
+    animation: waves-waving 7s ease-in-out infinite forwards;
+    opacity: 0;
+    animation-delay: 3s;
+  }
+
+  .waves--fast {
+    animation: waves-waving 4.5s ease-in-out infinite forwards;
+    opacity: 0;
+  }
+}
+
+
+//---
+// cloud animations
+
+@keyframes clouds-floating {
+  from {}
+  to {
+    transform: translateX(-800px)
+  }
+}
+
+[data-animation="life"] {
+  .clouds--near {
+    animation: clouds-floating 240s linear infinite forwards;
+  }
+
+  .clouds--far {
+    animation: clouds-floating 360s linear infinite forwards;
+  }
+}

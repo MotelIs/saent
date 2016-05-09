@@ -1,3 +1,4 @@
 ProgressBar();
 ScrollSection();
 Dropdown();
+Categorizing();

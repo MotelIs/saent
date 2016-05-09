@@ -1,4 +1,38 @@
 .life {
   @extend .section;
-  background-color: $color-green;
+}
+
+.life-illustrations {
+  @extend .illustration;
+}
+
+.life.active .life-illustration {
+  @extend .illustration--active;
+}
+
+#life-scene {
+  position: fixed;
+  bottom: 0;
+  transition: $colorTransition;
+  opacity: 0;
+  width: 150%;
+  left: -25%;
+  overflow: visible;
+
+  @include media($medium-screen-up) {
+    width: 100%;
+    left: 0;
+  }
+}
+
+#life-scene #sun {
+  @include media($mobile-screens) {
+    transform: translateY(-240px);
+  }
+}
+
+#life-scene #clouds {
+  @include media($mobile-screens) {
+    transform: translateY(-60px);
+  }
 }

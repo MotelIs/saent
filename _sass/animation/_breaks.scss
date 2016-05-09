@@ -1,0 +1,54 @@
+@keyframes to-green-screen {
+  from { background-color: $color-blue }
+  to { background-color: $color-green }
+}
+
+.alert-bar-breaks {
+  @extend .alert-bar;
+  background-color: $color-green;
+  opacity: 0;
+}
+
+.alert-bar-breaks--starting {
+  @extend .alert-bar-breaks;
+}
+
+.alert-bar-breaks--3 {
+  @extend .alert-bar-breaks;
+  margin-top: 5px;
+}
+
+.alert-bar-breaks--2 {
+  @extend .alert-bar-breaks;
+  margin-top: 5px;
+}
+
+.alert-bar-breaks--1 {
+  @extend .alert-bar-breaks;
+  margin-top: 5px;
+}
+
+[data-animation="breaks"] {
+  animation: to-green-screen 2s normal 4s forwards ease-out;
+
+
+  .alert-bar-breaks--starting,
+  .alert-bar-breaks--3,
+  .alert-bar-breaks--2,
+  .alert-bar-breaks--1 {
+    opacity: 1;
+  }
+
+  .alert-bar-breaks--3 {
+    transition-delay: 1s;
+  }
+
+  .alert-bar-breaks--2 {
+    transition-delay: 2s;
+  }
+
+  .alert-bar-breaks--1 {
+    transition-delay: 3s;
+  }
+
+}

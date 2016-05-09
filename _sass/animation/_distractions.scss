@@ -1,0 +1,166 @@
+
+.line-dock-app:nth-of-type(1) .line-dock-badge{
+  transition-delay: $app-offset * 1s;
+}
+.line-dock-app:nth-of-type(8) .line-dock-badge{
+  transition-delay: $app-offset * 2s;
+}
+.line-dock-app:nth-of-type(3) .line-dock-badge{
+  transition-delay: $app-offset * 3s;
+}
+.line-dock-app:nth-of-type(9) .line-dock-badge{
+  transition-delay: $app-offset * 4s;
+}
+.line-dock-app:nth-of-type(6) .line-dock-badge{
+  transition-delay: $app-offset * 5s;
+}
+.line-dock-app:nth-of-type(5) .line-dock-badge{
+  transition-delay: $app-offset * 6s;
+}
+.line-dock-app:nth-of-type(7) .line-dock-badge{
+  transition-delay: $app-offset * 7s;
+}
+.line-dock-app:nth-of-type(2) .line-dock-badge{
+  transition-delay: $app-offset * 8s;
+}
+.line-dock-app:nth-of-type(4) .line-dock-badge{
+  transition-delay: $app-offset * 9s;
+}
+
+#distractions-browser--left .distractions-tab:nth-of-type(1) {
+  transition-delay: $tab-offset * 1s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(2) {
+  transition-delay: $tab-offset * 2s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(3) {
+  transition-delay: $tab-offset * 3s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(4) {
+  transition-delay: $tab-offset * 4s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(5) {
+  transition-delay: $tab-offset * 5s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(6) {
+  transition-delay: $tab-offset * 6s;
+}
+#distractions-browser--left .distractions-tab:nth-of-type(7) {
+  transition-delay: $tab-offset * 7s;
+}
+
+.distractions-speech {
+  display: inline-block;
+  background: $color-red;
+  padding: 10px 15px;
+  border: 1px solid #FFF;
+  border-radius: 8px;
+  font-family: $fontFamily-base;
+  font-size: 18px * $mobileFontSize;
+  font-weight: 300;
+  color: #FFF;
+  position: absolute;
+  opacity: 0;
+  transition: $baseTransition;
+  z-index: 500;
+
+  @include media($medium-screen-up) {
+    font-size: 18px;
+    padding: 15px 25px;
+  }
+}
+
+.distractions-speech--hello {
+  @extend .distractions-speech;
+  top: 150px;
+  right: 200px;
+  transition-delay: 2s;
+
+  @include media($medium-screen-up) {
+    top: 250px;
+    right: 300px;
+  }
+}
+
+.distractions-speech--here {
+  @extend .distractions-speech;
+  right: 3px;
+  top: 5px;
+  transition-delay: 2.6s;
+
+  @include media($full-screen-up) {
+    right: -50px;
+    top: -35px;
+  }
+}
+
+.distractions-speech--do {
+  @extend .distractions-speech;
+  top: 220px;
+  left: 200px;
+  transition-delay: 2.125s;
+
+  @include media($medium-screen-up) {
+    left: 50px;
+    top: 135px;
+  }
+}
+
+
+@keyframes blink {
+  0%, 100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+
+
+
+// trigger
+[data-animation="distractions"] .line-dock-badge {
+  transition: $baseTransition;
+  opacity: 1;
+}
+
+[data-animation="distractions"] .distractions-browser-st18 {
+  animation: blink 2.5s infinite;
+}
+
+[data-animation="distractions"] .distractions-tab {
+  transition: $baseTransition;
+  opacity: 1;
+}
+
+[data-animation="distractions"] .distractions-speech {
+  opacity: 1;
+}
+
+[data-animation="distractions"] {
+  #distractions-browser--left,
+  #distractions-browser--right,
+  #distractions-browser--right-bottom {
+    background-color: $color-orange;
+    transition-delay: $distractionsTransitionDelay;
+  }
+}
+
+
+
+// reset animations
+.distractions:not(.active) .distractions-browsers #distractions-browser--left .distractions-tab {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.distractions:not(.active) .distractions-browsers #distractions-browser--left .distractions-tab:nth-of-type(1) {
+  opacity: 1;
+}
+
+.distractions:not(.active) .line-dock-badge {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.distractions:not(.active) .distractions-speech {
+  opacity: 0;
+  transition-delay: 0s;
+}

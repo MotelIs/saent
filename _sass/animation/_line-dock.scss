@@ -1,0 +1,12 @@
+[data-animation="life"],
+[data-animation="download"] {
+  .line-dock {
+    display: none;
+  }
+}
+
+[data-animation="distractions"] .line-dock-app {
+  background-color: $color-orange;
+  transition: $colorTransition;
+  transition-delay: $distractionsTransitionDelay;
+}

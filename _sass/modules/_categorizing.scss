@@ -1,8 +1,146 @@
 .categorizing {
   @extend .section;
-  background-color: $color-blue;
 }
 
 .categorizing-illustration {
   @extend .illustration;
+}
+
+.categorizing.active .categorizing-illustration {
+  @extend .illustration--active;
+}
+
+#categorizing-alert--mobile {
+  @extend .alert;
+  display: block;
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
+}
+
+
+//---
+// Categorizing Alert Area
+
+.alert--categorizing {
+  @extend .alert-background;
+  opacity: 0;
+}
+
+
+//---
+// Single Categorizing Alert Bar
+
+.alert-bar--categorizing {
+  @extend .alert-bar;
+  display: none;
+  opacity: 1;
+
+  @include media($medium-screen-up) {
+    display: block;
+  }
+}
+
+.alert-bar--categorizing--gmail {
+  @extend .alert-bar--categorizing;
+}
+.alert-bar--categorizing--writer,
+.alert-bar--categorizing--sketch,
+.alert-bar--categorizing--steam {
+  @extend .alert-bar--categorizing;
+  margin-top: 5px;
+}
+
+.alert-bar--categorizing-mobile {
+  @extend .alert-bar;
+  display: block;
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
+}
+
+.alert-bar--categorizing-mobile--gmail {
+  @extend .alert-bar--categorizing-mobile;
+}
+.alert-bar--categorizing-mobile--writer,
+.alert-bar--categorizing-mobile--sketch,
+.alert-bar--categorizing-mobile--steam {
+  @extend .alert-bar--categorizing-mobile;
+  margin-top: 5px;
+}
+
+
+//--
+// Inactive Alert Bar
+
+[data-category-alert]:not(.active) {
+  opacity: 0.85;
+  background-color: $color-whiteish;
+  .categorizing-alert-bg {
+    fill: $color-whiteish;
+  }
+  .categorizing-st1,
+  .categorizing-st5 {
+    stroke: $color-text;
+  }
+  .categorizing-st0 {
+    fill: $color-text;
+  }
+}
+
+
+//---
+// Interactions
+
+[data-button] {
+  cursor: pointer;
+}
+
+
+// ---
+// Active Category Button States
+
+.category-is-good {
+  background-color: $color-green;
+  .category-button-outline[data-category="good"] {
+    fill: $color-whiteish;
+  }
+  .category-button-text[data-category="good"]{
+    fill: $color-green;
+  }
+}
+
+.category-is-neutral {
+  background-color: $color-text;
+  .category-button-outline[data-category="neutral"] {
+    fill: $color-whiteish;
+  }
+  .category-button-text[data-category="neutral"]{
+    fill: $color-text;
+  }
+}
+
+.category-is-evil {
+  background-color: $color-red;
+  .category-button-outline[data-category="evil"] {
+    fill: $color-whiteish;
+  }
+  .category-button-text[data-category="evil"]{
+    fill: $color-red;
+  }
+}
+
+
+[data-category-alert="good"] {
+  @extend .category-is-good;
+}
+
+[data-category-alert="neutral"] {
+  @extend .category-is-neutral;
+}
+
+[data-category-alert="evil"] {
+  @extend .category-is-evil;
 }

@@ -36,15 +36,31 @@
 
 .btn {
   font-family: $fontFamily--button;
-  font-size: $fontSize--button;
+  font-size: $fontSize--button * $mobileFontSize;
   font-weight: $fontWeight--button;
   background-color: #FFF;
+  border: 2px solid #FFF;
   border-radius: 4px;
   color: $color-blue;
-  padding: 15px 21px 18px 20px;
+  padding: 12px 11px 13px 11px;
+  transition: background-color $base-duration $base-timing;
+
+  &:hover {
+    background-color: rgba(0,0,0,0);
+    color: #FFF;
+  }
+
+  @include media($medium-screen-up) {
+    font-size: $fontSize--button;
+    padding: 15px 21px 18px 20px;
+  }
 
   &:first-of-type {
-    margin-right: 20px;
+    margin-bottom: 10px;
+
+    @include media($medium-screen-up) {
+      margin-right: 20px;
+    }
   }
 }
 
@@ -52,5 +68,11 @@
   @extend .btn;
   color: #FFF;
   background-color: $color-blue;
+  border: 2px solid $color-blue;
   display: inline-block;
+
+  &:hover {
+    background-color: rgba(0,0,0,0);
+    color: $color-blue;
+  }
 }

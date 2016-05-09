@@ -1,10 +1,83 @@
 .section {
   height: calc(100vh - 120px);
-  padding-top: 50px;
-  padding-bottom: 50px;
   position: relative;
+  padding: 50px 13px;
+
+  @include media($large-screen-up) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
 
 .illustration {
-  @include outer-container();
+  text-align: center;
+  transition: $baseTransition;
+  max-width: 100%;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  padding: 0 15px;
+  top: 145px;
+
+  @include media($small-screen-up) {
+    top: 119px;
+  }
+
+  @include media($medium-screen-up) {
+    top: 133px;
+    padding: 0 50px;
+  }
+
+}
+
+.illustration--active {
+  position: fixed;
+}
+
+.alert {
+  transition: $baseTransition;
+  opacity: 0;
+
+  @include media($tablet-screen-up) {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  @include media($medium-screen-up) {
+    max-width: 1200px;
+  }
+}
+
+.alert-background {
+  transition: $baseTransition;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.alert-bar {
+  transition: $baseTransition;
+  transition-delay: 0s;
+  border: 1px solid #FFF;
+  overflow: hidden;
+}
+
+.browser {
+  width: 100%;
+  margin-top: 30px;
+  @include media($mobile-screens) {
+    max-width: 650px;
+  }
+  @include media($large-screen-up) {
+    max-width: 1000px;
+  }
+}
+
+.mobile-hidden {
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: initial;
+  }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="distractions-browser--right-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 418.4 364" style="enable-background:new 0 0 418.4 364;" xml:space="preserve">
+	<g>
+		<g>
+			<path class="distractions-browser--right-bottom-st0" d="M411.9,363.5H6.5c-3.3,0-6-2.7-6-6V6.5c0-3.3,2.7-6,6-6h405.4c3.3,0,6,2.7,6,6v351
+				C417.9,360.8,415.2,363.5,411.9,363.5z"/>
+			<path class="distractions-browser--right-bottom-st0" d="M189.2,110.9H26.5c-3.3,0-6-2.7-6-6V68.2c0-3.3,2.7-6,6-6h162.7c3.3,0,6,2.7,6,6v36.7
+				C195.2,108.2,192.5,110.9,189.2,110.9z"/>
+			<path class="distractions-browser--right-bottom-st0" d="M391.9,179.5H229.2c-3.3,0-6-2.7-6-6v-36.7c0-3.3,2.7-6,6-6h162.7c3.3,0,6,2.7,6,6v36.7
+				C397.9,176.8,395.2,179.5,391.9,179.5z"/>
+		</g>
+		<line class="distractions-browser--right-bottom-st0" x1="0.5" y1="30.5" x2="417.9" y2="30.5"/>
+		<g>
+			<circle class="distractions-browser--right-bottom-st0" cx="18.8" cy="15.5" r="8.3"/>
+			<circle class="distractions-browser--right-bottom-st0" cx="39.4" cy="15.5" r="8.3"/>
+			<circle class="distractions-browser--right-bottom-st0" cx="60" cy="15.5" r="8.3"/>
+		</g>
+	</g>
+</svg>

@@ -14,6 +14,7 @@ $font_size: $fontSize-base; // For Bourbon
 $fontWeight-base:       400;
 $lineHeight-base:       1;
 
+$mobileFontSize: 0.68;
 
 $fontFamily--intro:     $fontFamily-base;
 $fontSize--intro:       42px;
@@ -41,6 +42,21 @@ $color-red:     #E8212D;
 $color-orange:  #EF7F21;
 $color-magenta: #F272AA;
 $color-gray:    #BABFBF;
+$color-white:   #FFFFFF;
+$color-whiteish: #F6F4F4;
+
+$baseTransition: all 0.4s ease-out;
+$colorTransition: all 0.667s linear;
+$colorTransitionDelay: 0.8s;
+$distractionsTransitionDelay: 0.4s;
+
+
+// animation settings
+$facebook-offset : 0.33;
+$app-offset: 0.33;
+$tab-offset: 0.25;
+
+
 
 
 // ------
@@ -69,3 +85,25 @@ $color-gray:    #BABFBF;
 @import "modules/progress-bar";
 @import "modules/sessions";
 @import "modules/ui";
+
+// Animation
+@import "animation/bg-color";
+@import "animation/line-dock";
+@import "animation/illustrations";
+@import "animation/sessions";
+@import "animation/distractions";
+@import "animation/z-index";
+@import "animation/life";
+@import "animation/breaks";
+@import "animation/download";
+@import "animation/challenges";
+
+// illustrations
+@import "svg/breaks";
+@import "svg/categorizing";
+@import "svg/challenges-browser";
+@import "svg/challenges";
+@import "svg/default-browser";
+@import "svg/distractions";
+@import "svg/download-laptop";
+@import "svg/life-scene";

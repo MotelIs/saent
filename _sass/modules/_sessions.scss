@@ -1,14 +1,44 @@
 .sessions {
   @extend .section;
-  background-color: $color-blue;
 }
 
 .sessions-illustration {
   @extend .illustration;
+  opacity: 0;
 }
 
 #default-browser {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: block;
+  @extend .browser;
+}
+
+.sessions.active .sessions-illustration {
+  @extend .illustration--active;
+}
+
+
+
+
+.sessions-browser-content {
+  @extend .browser;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 15px;
+
+  @include media($medium-screen-only) {
+    padding: 0 65px;
+  }
+}
+
+#sessions-type {
+  color: #FFF;
+  font-family: "Courier";
+  font-size: 12px;
+  padding: 80px 10px;
+  text-align: left;
+
+  @include media($medium-screen-up) {
+    font-size: 18px;
+  }
 }

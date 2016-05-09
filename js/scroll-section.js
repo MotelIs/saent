@@ -8,7 +8,8 @@ var ScrollSection = function() {
           ui = $('[data-ui]'),
           uiTitle = $('[data-ui-title]'),
           uiButton = $('[data-ui-button-text]'),
-          uiFoldout = $('[data-ui-foldout-text]');
+          uiFoldout = $('[data-ui-foldout-text]'),
+          animation = $('[data-animation]')
 
       var updateText = function() {
         if(current.length){
@@ -17,7 +18,7 @@ var ScrollSection = function() {
           var newText = content[current];
 
           uiTitle.text(newText.title);
-          uiButton.text(newText.button);
+          uiButton.html(newText.button);
           uiFoldout.text(newText.foldout);
 
         } else {
@@ -45,18 +46,27 @@ var ScrollSection = function() {
 
             if(!activeSection.hasClass('active')) {
               activeSection.addClass('active');
+              animation.attr('data-animation', section.name)
             }
 
           // have not reached next section. return previous
           } else {
             sectionObj.removeClass('active');
+            animation.attr('data-animation', activeSectionName)
+
+            // initialize categorizing animation
+            if(activeSectionName === 'categorizing') {
+              categorizingDemo();
+            }
+            
             return activeSectionName;
           }
         }
+        // return last section
+        return sections[sections.length - 1].name;
       };
 
       var runAnimation = function(newSection) {
-
         if(current != newSection.className) {
           current = newSection;
           updateText();
@@ -85,6 +95,47 @@ var ScrollSection = function() {
       });
 
   })
+
+  //---
+  // Animation for inactive alert
+
+  var categorizingDemo = function() {
+
+    var stopAnimation = false,
+        inactiveAlert = $('[data-category-alert]:not(.active)')
+
+    if(inactiveAlert.length) {
+      inactiveAlert.removeClass('active');
+      // make sure it's set to active
+      var existingClass = inactiveAlert.attr('class')
+      if(existingClass.indexOf('active') < 0) {
+        inactiveAlert.attr('class', existingClass + ' active')
+      }
+
+      window.setTimeout(function(){
+        if(!stopAnimation) {
+          inactiveAlert.attr('data-category-alert', 'good');
+        }
+      }, 1000);
+      window.setTimeout(function(){
+        if(!stopAnimation) {
+          inactiveAlert.attr('data-category-alert', 'neutral');
+        }
+      }, 2500);
+      window.setTimeout(function(){
+        if(!stopAnimation) {
+          inactiveAlert.attr('data-category-alert', 'evil');
+        }
+      }, 4000);
+      window.setTimeout(function(){
+        if(!stopAnimation) {
+          inactiveAlert.attr('data-category-alert', 'good');
+        }
+      }, 5500);
+    }
+
+
+  };
 };
 
 

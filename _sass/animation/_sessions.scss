@@ -1,0 +1,24 @@
+@keyframes type{
+  from { width: 0; }
+}
+
+.type-in {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 4s steps(60, end);
+  width: 30em;
+}
+
+
+
+// trigger
+[data-animation="sessions"] #sessions-type {
+  @extend .type-in;
+}
+
+
+// reset animations
+.animation:not([data-animation="sessions"]) #sessions-type {
+  opacity: 0;
+  transition-delay: 0s;
+}

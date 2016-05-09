@@ -1,8 +1,44 @@
 .challenges {
   @extend .section;
-  background-color: $color-blue;
 }
 
 .challenges-illustration {
   @extend .illustration;
+}
+
+.challenges.active .challenges-illustration {
+  @extend .illustration--active;
+}
+
+.alert--challenges {
+  @extend .alert-background;
+  background-color: $color-magenta;
+  opacity: 0 ;
+  border: 1px solid #FFF;
+}
+
+#challenges-alert {
+  @extend .alert;
+  position: relative;
+  z-index: 400;
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: initial
+  }
+}
+
+#challenges-alert--mobile {
+  @extend .alert;
+  position: relative;
+  z-index: 400;
+  display: block;
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
+}
+
+.challenges-browser-part {
+  opacity: 0;
 }

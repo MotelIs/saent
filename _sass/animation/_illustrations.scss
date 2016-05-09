@@ -1,0 +1,52 @@
+[data-animation="sessions"],
+[data-animation="categorizing"],
+[data-animation="challenges"],
+[data-animation="breaks"],
+[data-animation="life"],
+[data-animation="download"] {
+  .distractions-illustration {
+    opacity: 0;
+  }
+  .line-dock-badge {
+    display: none;
+  }
+}
+
+[data-animation="sessions"],
+[data-animation="categorizing"],
+[data-animation="challenges"],
+[data-animation="breaks"] {
+  .sessions-illustration {
+    opacity: 1;
+  }
+}
+
+[data-animation="distractions"] .line-dock {
+  opacity: 1;
+}
+
+[data-animation="categorizing"]  {
+  .alert--categorizing,
+  #categorizing-alert--mobile {
+    opacity: 1;
+  }
+}
+
+[data-animation="challenges"] {
+  #challenges-alert,
+  #challenges-alert--mobile,
+  #challenges-browser {
+    opacity: 1;
+  }
+}
+
+[data-animation="breaks"] {
+  .breaks-alert,
+  .breaks-alert--mobile {
+    opacity: 1;
+  }
+}
+
+[data-animation="life"] #life-scene {
+  opacity: 1;
+}

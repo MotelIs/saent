@@ -1,0 +1,47 @@
+[data-animation="challenges"] .challenges-browser-part {
+  transition: opacity 0.8s ease-out;
+  opacity: 1;
+}
+
+[data-animation="challenges"] #challenges-alert,
+[data-animation="challenges"] #challenges-alert--mobile,
+[data-animation="challenges"] .alert--challenges {
+  transition-delay: 2s;
+  opacity: 1;
+}
+
+
+
+
+@keyframes facebook-appear {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+
+.facebook-like {
+  opacity: 0;
+  animation: facebook-appear 0.3s normal forwards;
+}
+
+[data-animation="challenges"] {
+  .facebook-like--1 {
+    @extend .facebook-like;
+  }
+  .facebook-like--2 {
+    @extend .facebook-like;
+    animation-delay: $facebook-offset * 1s;
+  }
+  .facebook-like--3 {
+    @extend .facebook-like;
+    animation-delay: $facebook-offset * 2s;
+  }
+  .facebook-like--4 {
+    @extend .facebook-like;
+    animation-delay: $facebook-offset * 3s;
+  }
+  .facebook-like--5 {
+    @extend .facebook-like;
+    animation-delay: $facebook-offset * 4s;
+  }
+}
