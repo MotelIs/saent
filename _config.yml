@@ -10,7 +10,7 @@ title: Saent
 email: hello@motel.is
 description: Saent Landing Page
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://motelis.github.io/saent" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
