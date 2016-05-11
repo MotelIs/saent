@@ -1,3 +1,10 @@
 [data-animation="download"] .download-st2 {
   fill: $color-blue;
 }
+
+[data-animation="download"] {
+  .ui-foldout.active {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
