@@ -36,6 +36,7 @@
 .download-laptop {
   position: relative;
   width: 200px;
+  margin: 0 auto;
 
   @include media($small-screen-up) {
     width: 300px;
@@ -71,6 +72,20 @@
 
   @include media($tablet-screen-up) {
     display: none;
+  }
+}
+
+.download-form-intro {
+  font-family: $fontFamily-heading;
+  font-size: $fontSize--form * $mobileFontSize;
+  font-weight: $fontWeight--form;
+  line-height: 1.5;
+  color: #FFF;
+  margin-bottom: 15px;
+  max-width: 300px;
+
+  @include media($medium-screen-up) {
+    font-size: $fontSize--form;
   }
 }
 
