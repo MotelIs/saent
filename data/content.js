@@ -25,13 +25,13 @@ var content = {
   },
 
   "breaks" : {
-    "title": "and make sure you take breaks",
+    "title": "and I'll make sure you take breaks",
     "foldout": "Studies show that taking adequate breaks during work can reduce stress and keep your mind agile and creative. I’ll make sure you break when you need to.",
     "button": "<span class='mobile-hidden'>Learn About </span>Breaks"
   },
 
   "life" : {
-    "title": "and live a more fulfilling life.",
+    "title": "so you can live a more fulfilling life.",
     "foldout": "Saent is building a platform to help you live a more fulfilling life. Coming soon: integrations with other apps and devices, personalized learning goals, inspirational content, and more.",
     "button": "What Else Can Saent Do?"
   },
