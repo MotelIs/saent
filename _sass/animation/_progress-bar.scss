@@ -1,0 +1,58 @@
+$progress-width: 6603;
+$progress-intro: 859;
+$progress-sessions: 1718;
+$progress-categorizing: 2600;
+$progress-challenges: 3459;
+$progress-breaks: 4351;
+$progress-life: 5215;
+
+
+
+
+[data-animation] {
+  .progress-hint {
+    width: percentage($progress-intro / $progress-width);
+  }
+}
+
+[data-animation="distractions"] {
+  .progress-hint {
+    width: percentage($progress-sessions / $progress-width);
+  }
+}
+
+[data-animation="sessions"] {
+  .progress-hint {
+    width: percentage($progress-categorizing / $progress-width);
+  }
+}
+
+[data-animation="categorizing"] {
+  .progress-hint {
+    width: percentage($progress-challenges / $progress-width);
+  }
+}
+
+[data-animation="challenges"] {
+  .progress-hint {
+    width: percentage($progress-breaks / $progress-width);
+  }
+}
+
+[data-animation="breaks"] {
+  .progress-hint {
+    width: percentage($progress-life / $progress-width);
+  }
+}
+
+[data-animation="life"] {
+  .progress-hint {
+    width: 100%;
+  }
+}
+
+[data-animation="download"] {
+  .progress-hint {
+    width: 100%;
+  }
+}

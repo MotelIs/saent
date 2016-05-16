@@ -1,4 +1,22 @@
-.progress-bar {
+.progress-area {
+  background-color: $color-bg;
   border-bottom: 2px solid $color-gray;
   height: 8px;
+  position: relative;
+}
+
+.progress-bar {
+  background-color: $color-blue;
+  height: 6px;
+  position: relative;
+  z-index: 20;
+}
+
+.progress-hint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  background-color: transparentize($color-blue, 0.75);
+  z-index: 10;
 }

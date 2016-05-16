@@ -58,7 +58,7 @@ var ScrollSection = function() {
             if(activeSectionName === 'categorizing') {
               categorizingDemo();
             }
-            
+
             return activeSectionName;
           }
         }
