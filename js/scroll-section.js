@@ -2,24 +2,28 @@ var ScrollSection = function() {
 
   $(document).ready(function(){
 
-      var current = '',
+      var body = $('html, body'),
+          current = '',
           top = '',
           sections = $('[data-section]'),
+          nextSection = '',
           ui = $('[data-ui]'),
           uiTitle = $('[data-ui-title]'),
           uiButton = $('[data-ui-button-text]'),
           uiFoldout = $('[data-ui-foldout-text]'),
-          animation = $('[data-animation]')
+          animation = $('[data-animation]'),
+          progressHint = $('.progress-hint')
 
       var updateText = function() {
         if(current.length){
           ui.addClass('active');
 
-          var newText = content[current];
-
-          uiTitle.text(newText.title);
-          uiButton.html(newText.button);
-          uiFoldout.text(newText.foldout);
+          if(content[current]) {
+            var newText = content[current];
+            uiTitle.text(newText.title);
+            uiButton.html(newText.button);
+            uiFoldout.text(newText.foldout);
+          }
 
         } else {
           // in the first section
@@ -33,6 +37,7 @@ var ScrollSection = function() {
         top = $(window).scrollTop() + (128);
         var activeSection = ''
         var activeSectionName = ''
+        var activeSectionIndex = -1
 
         for(var i = 0; i < sections.length; i++) {
           var section = sections[i];
@@ -42,6 +47,7 @@ var ScrollSection = function() {
           if(section.top < top) {
             activeSection = sectionObj
             activeSectionName = section.name;
+            activeSectionIndex = section.index;
 
 
             if(!activeSection.hasClass('active')) {
@@ -59,7 +65,7 @@ var ScrollSection = function() {
               categorizingDemo();
             }
 
-            return activeSectionName;
+            return { name: activeSectionName, index: activeSectionIndex };
           }
         }
         // return last section
@@ -67,18 +73,32 @@ var ScrollSection = function() {
       };
 
       var runAnimation = function(newSection) {
-        if(current != newSection.className) {
-          current = newSection;
+
+        name = newSection.name;
+        index = newSection.index;
+
+        if(typeof name !== "undefined" && current != name.className) {
+          current = name;
           updateText();
+
+          if(sections[index + 1]) {
+            nextSection = index + 1;
+          }
         } else {
           // do nothing, still in the same section
         }
       };
 
+      var scrollToNext = function() {
+        body.animate({
+          scrollTop: sections[nextSection].top,
+        }, 500);
+      }
+
 
       // turn sections into objects
       for(var i = 0; i < sections.length; i++) {
-        sections[i] = new section(sections[i]);
+        sections[i] = new section(sections[i], i);
       }
 
 
@@ -93,6 +113,11 @@ var ScrollSection = function() {
           sections[i].updateTop();
         }
       });
+
+      // watch for clicking
+      progressHint.click(function(){
+        scrollToNext();
+      })
 
   })
 
@@ -141,10 +166,11 @@ var ScrollSection = function() {
 
 
 // section object
-function section(elem) {
+function section(elem, i) {
   this.self = elem;
   this.top = $(elem).offset().top;
   this.name = elem.className;
+  this.index = i;
 
   this.updateTop = function() {
     this.top = $(this.self).offset().top;
