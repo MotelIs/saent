@@ -101,6 +101,11 @@ var ScrollSection = function() {
         sections[i] = new section(sections[i], i);
       }
 
+      // initialize
+      $(document).ready(function(){
+        runAnimation(getCurrentSection());
+      });
+
 
       // watch for scrolling
       $(document).on('scroll', function(){
@@ -117,7 +122,7 @@ var ScrollSection = function() {
       // watch for clicking
       progressHint.click(function(){
         scrollToNext();
-      })
+      });
 
   })
 
