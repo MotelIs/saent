@@ -15,10 +15,10 @@
 
 @keyframes pulse-hint {
   0%, 100% {
-    background-color: transparentize($color-blue, 0.8);
+    background-color: transparentize($color-blue, 0.9);
   }
   50% {
-    background-color: transparentize($color-blue, 0.6);
+    background-color: transparentize($color-blue, 0.1);
   }
 }
 
@@ -29,9 +29,10 @@
   top: 0;
   left: 0;
   height: 6px;
-  background-color: transparentize($color-blue, 0.80);
+  background-color: transparentize($color-blue, 0.9);
   z-index: 10;
-  animation: pulse-hint 2s ease-in-out infinite;
+  animation: pulse-hint 3s ease-in-out infinite;
+  animation-delay: 1s;
 
   &:hover {
     background-color: transparentize($color-blue, 0.5);
