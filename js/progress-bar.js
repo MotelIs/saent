@@ -15,7 +15,7 @@ var ProgressBar = function() {
       $(document).on('scroll', function(){
          value = $(window).scrollTop();
          percentage = (value/max)*100;
-         progressIndicator.css('background', 'linear-gradient(to right,#14AAE2,#14AAE2 ' + percentage + '%,#F4F4F4 ' + percentage + '%,#F4F4F4)');
+         progressIndicator.css('width', percentage + '%');
       });
 
   })

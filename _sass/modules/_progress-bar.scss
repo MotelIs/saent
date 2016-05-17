@@ -1,4 +1,40 @@
-.progress-bar {
+.progress-area {
+  background-color: $color-bg;
   border-bottom: 2px solid $color-gray;
   height: 8px;
+  position: relative;
+}
+
+.progress-bar {
+  background-color: $color-blue;
+  height: 6px;
+  width: 0;
+  position: relative;
+  z-index: 20;
+}
+
+@keyframes pulse-hint {
+  0%, 100% {
+    background-color: transparentize($color-blue, 0.9);
+  }
+  50% {
+    background-color: transparentize($color-blue, 0.1);
+  }
+}
+
+.progress-hint {
+  transition: $baseTransition;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  height: 6px;
+  background-color: transparentize($color-blue, 0.9);
+  z-index: 10;
+  animation: pulse-hint 3s ease-in-out infinite;
+  animation-delay: 1s;
+
+  &:hover {
+    background-color: transparentize($color-blue, 0.5);
+  }
 }
