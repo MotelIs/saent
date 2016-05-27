@@ -2,3 +2,12 @@
 .page-content {
   // background-color: #F5F5F5;
 }
+
+body {
+  scroll-snap-type: proximity;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: proximity;
+  -ms-scroll-snap-points-y: repeat(100vh);
+  -ms-scroll-behavior: smooth;
+}
