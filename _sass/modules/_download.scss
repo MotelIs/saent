@@ -1,9 +1,9 @@
 .download {
   @extend .section;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50vh;
 }
 
 .download-illustration {
