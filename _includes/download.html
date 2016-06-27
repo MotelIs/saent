@@ -1,8 +1,10 @@
 <section class="download" data-section="download" id="subscribe">
   <div class="download-illustration">
     <div class="download-buttons">
-      <a href="http://www.saent.com/downloads/Saent-Installer.pkg" class="btn">Download for OSX</a>
-      <a href="http://www.saent.com/downloads/Saent4WinSetup.msi" class="btn">Download for Windows</a>
+      <a onclick="Analytics().trackMacDownload()"
+          href="http://www.saent.com/downloads/Saent-Installer.pkg" class="btn">Download for OSX</a>
+      <a onclick="Analytics().trackWindowsDownload()"
+          href="http://www.saent.com/downloads/Saent4WinSetup.msi" class="btn">Download for Windows</a>
 
     </div>
 
